@@ -1,0 +1,203 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Stock:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+		<div class="span2 knowledgecate">
+			<ul class="nav nav-list">
+				<li class="active">
+					<a href="javascript:void(0);">那类型查看</a>
+				</li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>销售单</a></li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>销售退货单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>采购单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>采购退货单</a></li>
+				<li><a href="{:U('stock/inout')}"><i class="icon-white icon-chevron-right"></i>出入库统计</a></li>
+				<li><a href="{:U('stock/out')}"><i class="icon-white icon-chevron-right"></i>出库统计</a></li>
+				<li><a href="{:U('stock/in')}"><i class="icon-white icon-chevron-right"></i>入库统计</a></li>
+			</ul>
+		</div>
+		<div class="span10">
+			<div class="pull-left">
+				<ul class="nav pull-left">
+					<li class="pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="index.php" method="get">
+							<ul class="nav pull-left">
+								<li class="pull-left">
+									&nbsp;
+									<select id="field" style="width:auto" onchange="changeCondition()" name="field">
+										<option class="text" value="sn_code">编号</option>
+										<option selected="selected" class="text" value="subject">主题</option>
+										<if condition="$assign[mode] eq s">
+										<option class="customer" value="customer_id">客户名</option>
+										</if>
+										<if condition="$assign[mode] eq p">
+										<option class="supplier" value="supplier_id">供应商名</option>
+										</if>
+										<option class="role" value="create_user_id">制单人</option>
+										<option class="date" value="create_time">创建时间</option>
+									</select>&nbsp;&nbsp;
+								</li>
+								<li id="conditionContent" class="pull-left">
+									<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+										<option value="contains">{:L('CONTAINS')}</option>
+										<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+										<option value="is">{:L('IS')}</option>
+										<option value="isnot">{:L('ISNOT')}</option>						
+										<option value="start_with">{:L('START_WITH')}</option>
+										<option value="end_with">{:L('END_WITH')}</option>
+										<option value="is_empty">{:L('IS_EMPTY')}</option>
+										<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+									</select>&nbsp;&nbsp;
+								</li>
+								<li id="searchContent" class="pull-left"><input value="" id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;</li>
+								<li class="pull-left">
+									<input name="m" value="stock" type="hidden">
+									<input name="a" value="inoutorder" type="hidden">
+									<input name="mode" value="{$assign[mode]}" type="hidden">
+									<input name="stage" value="{$assign[stage]}" type="hidden">
+									<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png">搜索</button>
+								</li>
+							</ul>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="span10">
+			<form id="form1" action="{:U('stock/inoutorder')}" method="Post">
+				<table class="table table-hover table-striped table_thead_fixed">
+					<thead>
+						<tr id="childNodes_num">
+							<th><input class="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+							<th>编号</th>
+							<th>主题</th>
+							<th>客户/供应商</th>
+							<th>状态</th>
+							<th>金额</th>
+							<th>数量</th>
+							<th>制单人</th>
+							<th>创建时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<volist name="assign.list" id="vo">
+						<tr>
+							<td><input name="order_id[2]" class="check_list" value="{$vo.id}" type="checkbox"></td>
+							<td><a href="/index.php?m={$assign.m}&a=view&id={$vo.id}">{$vo.sn_code}</a></td>								
+							<td>{$vo.subject}</td>
+							<if condition="$assign[mode] eq s">
+							<td>
+								<a href="/index.php?m=customer&a=view&id={$vo.customer_id}" style="color:green">{$vo.customer_name}</a>
+							</td>
+							</if>
+							<if condition="$assign[mode] eq p">
+							<td>
+								<a href="/index.php?m=supplier&a=view&id={$vo.supplier_id}" style="color:green">{$vo.supplier_name}</a>						
+							</td>
+							</if>
+
+							<if condition="$assign[mode] eq s && $assign[stage] eq out && $vo[status] eq 0">
+								<td>未出库</td>
+							</if>
+							<if condition="$assign[mode] eq s && $assign[stage] eq out && $vo[status] eq 1">
+								<td>已出库</td>
+							</if>
+							<if condition="$assign[mode] eq s && $assign[stage] eq in && $vo[status] eq 0">
+								<td>未入库</td>
+							</if>
+							<if condition="$assign[mode] eq s && $assign[stage] eq in && $vo[status] eq 1">
+								<td>已入库</td>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq in && $vo[status] eq 0">
+								<td>未入库</td>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq in && $vo[status] eq 1">
+								<td>已入库</td>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq out && $vo[status] eq 0">
+								<td>未出库</td>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq out && $vo[status] eq 1">
+								<td>已出库</td>
+							</if>
+
+							<td>{$vo.sales_price}{$vo.purchase_price}</td>
+							<td>{$vo.total_amount}{$vo.sales_count}</td>
+							<td><a href="javascript:void(0);" class="role_info" rel="{$vo.create_user_id}">{$vo.create_user_name}</a></td>
+							<td>{$vo.create_time|date="Y-m-d",###}</td>
+							<td>
+							<if condition="$assign[mode] eq s && $assign[stage] eq out && $vo[status] eq 0">
+								<a href="javascript:void(0);" class="control_stock" rel="/index.php?m={$assign.m}&a=outorder&id={$vo.id}">出库</a>
+							</if>
+							<if condition="$assign[mode] eq s && $assign[stage] eq in && $vo[status] eq 0">
+								<a href="javascript:void(0);" class="control_stock" rel="/index.php?m={$assign.m}&a=inorder&id={$vo.id}">入库</a>
+							</if>
+							<if condition="$assign[mode] eq s && $assign[stage] eq out && $vo[status] eq 1">
+								<a target="_blank" href="/index.php?m=stock&a=printhtml&id={$vo.id}&type=1">打印/预览</a>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq in && $vo[status] eq 0">
+								<a href="javascript:void(0);" class="control_stock" rel="/index.php?m={$assign.m}&a=inorder&id={$vo.id}">入库</a>
+							</if>
+							<if condition="$assign[mode] eq p && $assign[stage] eq out && $vo[status] eq 0">
+								<a href="javascript:void(0);" class="control_stock" rel="/index.php?m={$assign.m}&a=outorder&id={$vo.id}">出库</a>
+							</if>
+							<!--<if condition="$assign[mode] eq p && $assign[stage] eq out && $vo[status] eq 1">
+								<a href="/index.php?m=stock&a=printhtml&id={$vo.id}&type=2">打印/预览</a>
+							</if>-->
+							</td>
+						</tr>
+						</volist>					
+					</tbody>						
+					<tfoot>
+						<tr>
+							<td colspan="10">
+								{$assign.page}
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<script type="text/javascript">
+	$(function(){
+		$("#field option[value='subject']").prop("selected", true);changeCondition();
+		$("#condition option[value='contains']").prop("selected", true);changeSearch();
+		$("#search").prop('value', '');	$("#check_all").click(function(){
+			$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+		});
+		$(".control_stock").click(function(){
+			if(confirm('操作后将不可撤销，确认操作吗？')){
+				var url = $(this).attr('rel');
+				location.href = url;
+			}
+		});
+		$("#dosearch").click(function(){
+			result = checkSearchForm();
+			if(result) $("#searchForm").submit();
+		});
+	});
+	$nodes_num = document.getElementById("childNodes_num").children.length;
+	$("#td_colspan").attr('colspan',$nodes_num);
+
+	//创建人弹窗
+	$("#dialog-role-info").dialog({
+	    autoOpen: false,
+	    modal: true,
+		width: 600,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+	$(".role_info").click(function(){
+		var role_id = $(this).attr('rel');
+		$('#dialog-role-info').dialog('open');
+		$('#dialog-role-info').load('{:U('user/dialoginfo','id=')}'+role_id);
+	});
+</script>
+<include file="Public:footer" />

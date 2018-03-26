@@ -1,0 +1,125 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header" style="border:none; font-size:14px;">
+		<include file="Stock:header" />
+	</div>
+		<div class="row">		
+		<div class="span12">
+			<ul class="nav pull-left">
+				<li class="dropdown nav pull-left" style="margin-right:8px;">
+					<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i>&nbsp;{:L('SELECT_STOCK_OF_WAREHOUSE')}<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="{:U('stock/index')}" class="link">{:L('ALL')}</a></li>
+						<volist name='warehouse_list' id='vo'>
+						<li>
+							<a href="{:U('stock/index','act=search&field=warehouse_id&search=')}{$vo.id}" class="link">{$vo.name}</a>
+						</li>
+						</volist>
+					</ul>
+				</li>
+				<li class="pull-left">
+					<form class="form-inline" id="searchForm" action="index.php" method="get">
+						<ul class="nav pull-left">
+							<li class="pull-left">
+								<select style="width:auto" id="field" onchange="changeCondition()" name="field">
+									<option selected="selected" class="text" value="product_name">{:L('PRODUCT_NAME')}</option>
+									<option class="number" value="amounts">{:L('STOCK')}{:L('AMOUNTS')}</option>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li id="conditionContent" class="pull-left">
+								<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+									<option selected="selected" value="contains">{:L('CONTAINS')}</option>
+									<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+									<option value="is">{:L('IS')}</option>
+									<option value="isnot">{:L('ISNOT')}</option>
+									<option value="start_with">{:L('START_WITH')}</option>
+									<option value="end_with">{:L('END_WITH')}</option>
+									<option value="is_empty">{:L('IS_EMPTY')}</option>
+									<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li id="searchContent" class="pull-left">
+								<input value="" id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input name="m" value="stock" type="hidden">
+								<button type="submit" id="dosearch" class="btn"><img src="__PUBLIC__/img/search.png">  {:L('SEARCH')}</button> &nbsp;
+							</li>
+						</ul>
+						<input name="act" id="act" value="search" type="hidden">
+					</form>
+				</li>
+			</ul>
+			<!-- <div class="pull-right">					
+				<a href="/index.php?m=stock&a=add" class="btn btn-primary"><i class="icon-plus"></i>&nbsp; 创建出 / 入库单</a>&nbsp;
+			</div> -->
+		</div>
+		<div class="span12">				
+			<form id="form1" action="" method="post">
+			<input name="owner_id" id="hidden_owner_id" value="0" type="hidden">
+			<table class="table table-hover table-striped table_thead_fixed">
+				<thead>
+					<tr id="childNodes_num">
+						<th><input id="check_all" type="checkbox"></th>
+                        <th>{:L('PRODUCT')}</th>
+                        <th>
+							<a href="{:U('stock/index','field=amounts&order=')}{$order}">
+								{:L('STOCK')}{:L('AMOUNTS')}
+								<if condition="$Think.get.field eq 'amounts' && $Think.get.order eq 'desc'"><img src="__PUBLIC__/img/arrow_down.png"></if>
+								<if condition="$Think.get.field eq 'amounts' && $Think.get.order eq 'asc'"><img src="__PUBLIC__/img/arrow_up.png"></if>
+							</a>
+						</th>
+                        <th>{:L('WAREHOUSE')}</th>
+                        <th>
+							<a href="{:U('stock/index','field=last_change_time&order=')}{$order}">{:L('LAST_CHANGE_TIME')}
+								<if condition="$Think.get.field eq 'last_change_time' && $Think.get.order eq 'desc'"><img src="__PUBLIC__/img/arrow_down.png"></if>
+								<if condition="$Think.get.field eq 'last_change_time' && $Think.get.order eq 'asc'"><img src="__PUBLIC__/img/arrow_up.png"></if>
+							</a>
+						</th>
+                        <th>{:L('VIEW')}</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td id="td_colspan">
+							{$page}
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<volist name='list' id='vo'>
+					<tr>
+						<td>
+							<input name="stock_id[]" class="check_list" value="{$vo.id}" type="checkbox"> 
+						</td>
+						<td><a href="{:U('product/view','id=')}{$vo.product_id}">{$vo.product_name}</a></td>
+						<td>{$vo.amounts}</td>
+						<td>{$vo.warehouse_name}</td>
+						<td>{$vo['last_change_time'] | date='Y-m-d',###}</td>
+						<td><a href="{:U('stock/view','id=')}{$vo.id}">{:L('VIEW')}</a></td>
+					</tr>	
+					</volist>				
+				</tbody>	
+			</table>	
+			</form>	
+		</div>		
+	</div>
+</div>
+<script type="text/javascript">
+	width=800;
+	$(function(){
+		$("#field option[value='product_name']").prop("selected", true);changeCondition();
+		$("#condition option[value='contains']").prop("selected", true);changeSearch();
+		$("#search").prop('value', '');	
+		$("#check_all").click(function(){
+			$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+		});
+		$("#dosearch").click(function(){
+			result = checkSearchForm();
+			if(result) $("#searchForm").submit();
+		});
+	});
+	$nodes_num = document.getElementById("childNodes_num").children.length;
+	$("#td_colspan").attr('colspan',$nodes_num);
+</script>
+<include file="Public:footer" />

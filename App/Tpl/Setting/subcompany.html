@@ -1,0 +1,122 @@
+<include file="Public:header" />
+<script src="__PUBLIC__/js/PCASClass.js" type="text/javascript"></script>
+<div class="container">
+	<div class="page-header">
+		<h4>{:L('SYSTEM_SETTING')}</h4>
+	</div>
+	<include file="Public:alert" />	
+	<div class="tabbable">
+		<?php $active=4;?>
+		<include file="Setting:header" />
+		<div class="row">
+			<div class="span12" style="margin-bottom:10px;">
+				<div class="pull-left">
+					<a class="btn" id="delete"><i class="icon-remove"></i>{:L('DELETE')}</a>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="javascript:void(0);" id="add_warehouse"><i class="icon-plus"></i>&nbsp; {:L('ADD')}{:L('SUBCOMPANY')}</a>&nbsp;&nbsp;
+				</div>
+			</div>
+			<div class="span12">
+				<form id="form1" method="Post" action="{:U('stock/deletewarehouse')}">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+								<th><input class="check_all" name="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th>{:L('NAMES')}</th>
+								<th>{:L('URL')}</th>
+								<th>{:L('DESCRIPTION')}</th>
+								<th>{:L('CREATE_TIME')}</th>
+								<th>{:L('OPERATE')}</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="4">
+									{$page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="subcompany_list" id="vo">
+								<tr>
+									<td>
+										<input class="check_list" name="ids[]" value="{$vo.id}" type="checkbox">
+									</td>
+									<td><a href="javascript:void(0);" class="edit_warehouse" rel="{$vo.id}">{$vo.name}</a></td>
+									<td>{$vo.url}</td>
+									<td>{$vo.description}</td>
+									<td>{$vo[create_time] | date='Y-m-d',###}</td>
+									<td>
+										<a href="javascript:void(0);" class="edit_warehouse" rel="{$vo.id}">{:L('EDIT')}</a>&nbsp;&nbsp;
+										<a href="{:U('setting/deletecompany','id=')}{$vo.id}" class="del_confirm">{:L('DELETE')}</a>
+									</td>
+								</tr>
+							</volist>				
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hide" id="dialog-add-warehouse" title="{:L('ADD')}{:L('SUBCOMPANY')}">loading...</div>
+<div class="hide" id="dialog-edit-warehouse" title="{:L('EDIT')}{:L('SUBCOMPANY')}">loading...</div>
+<script type="text/javascript">
+	width=800;	//添加仓库
+	$("#dialog-add-warehouse").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			'确定':function(){
+				$('#add_warehouse_form').submit();
+			},
+			'取消':function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+	
+	$('#add_warehouse').click(function(){
+		$('#dialog-add-warehouse').dialog('open');
+		$('#dialog-add-warehouse').load('{:U('setting/addsubcompany')}');
+	});
+
+	//编辑仓库
+	$("#dialog-edit-warehouse").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			'确定':function(){
+				$('#edit_warehouse_form').submit();
+			},
+			'取消':function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+	
+	$('.edit_warehouse').click(function(){
+		var warehouse_id = $(this).attr('rel');
+		$('#dialog-edit-warehouse').dialog('open');
+		$('#dialog-edit-warehouse').load('{:U('setting/editsubcompany','id=')}'+warehouse_id);
+	});
+	
+	//全选
+	$("#check_all").click(function(){
+		$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+	});
+
+	$('#delete').click(function(){
+		if(confirm("{:L('ARE_YOU_SRUE_DELETE')}")){
+			$("#form1").submit();
+		}
+	});
+</script>
+<include file="Public:footer" />

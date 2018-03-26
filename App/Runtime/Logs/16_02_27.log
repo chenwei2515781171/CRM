@@ -1,0 +1,4 @@
+[ 2016-02-27T17:54:33+08:00 ] 171.37.34.84 /index.php?m=purchase&a=view&id=45
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+

@@ -1,0 +1,22 @@
+<form method="post" action="{:U('setting/editwarehouse')}" id="edit_warehouse_form" class="form-horizontal">
+	<input type="hidden" name="id" value="{$data.id}">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th colspan="2">{:L('SUBCOMPANY')}{:L('SETTING')}</th>
+			</tr>
+			<tr>
+				<td class="tdleft span2">{:L('NAME')}</td>
+				<td><input type="text" name="name" class="span3" value="{$data.name}"></td>
+			</tr>
+			<tr>
+				<td class="tdleft span2">{:L('COMPANY_URL')}</td>
+				<td><input type="text" name="url" class="span3" value="{$data.url}"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('DESCRIPTION')}</td>
+				<td><textarea style="min-height:80px" class="span4" name="description">{$data.description}</textarea></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

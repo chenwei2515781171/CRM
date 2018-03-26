@@ -1,0 +1,4 @@
+[ 2016-02-20T16:15:49+08:00 ] 180.136.237.226 /index.php?m=finance&a=view&t=receivingorder&id=245
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 378 ) LIMIT 1  
+

@@ -1,0 +1,13 @@
+[ 2016-03-14T12:00:25+08:00 ] 113.12.146.71 /index.php?field=product_name&condition=contains&search=%E9%85%B1%E9%A6%99&m=stock&act=search
+ERR: Unknown column 'product_name' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `crm_stock` WHERE ( `amounts` <> '0' ) ORDER BY product_name desc LIMIT 0,15  
+
+[ 2016-03-14T14:05:23+08:00 ] ERR: (ThinkException) 模板不存在[./App/Tpl/Finance/zengsong.html]
+[ 2016-03-14T14:05:38+08:00 ] ERR: (ThinkException) 模板不存在[./App/Tpl/Finance/zengsong.html]
+[ 2016-03-14T14:07:41+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-03-14T14:10:18+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-03-14T14:10:25+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-03-14T14:11:43+08:00 ] 113.12.146.71 /index.php?m=finance&a=zengsong&customer=all&role=all&start_time=&end_time=&act=zsexcel
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+

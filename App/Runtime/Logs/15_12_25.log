@@ -1,0 +1,20 @@
+[ 2015-12-25T16:42:01+08:00 ] 180.136.235.13 /index.php?m=product&a=view&id=142
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) ) 
+
+[ 2015-12-25T17:12:45+08:00 ] 180.136.204.48 /index.php?m=product&a=view&id=156
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) ) 
+

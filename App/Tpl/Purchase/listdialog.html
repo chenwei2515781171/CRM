@@ -1,0 +1,136 @@
+<div class="clearfix">
+	<ul class="nav pull-left">			
+		<li class="pull-left" >
+			<select style="width:auto" id="fields" onchange="changeCondition()" name="field">
+				<option class="word" value="sn_code">编号</option>
+				<option class="word" value="subject">主题</option>
+			</select>&nbsp;&nbsp;
+		</li>
+		<li id="conditionContent" class="pull-left">
+			<select id="conditions" style="width:auto" name="condition" onchange="changeSearch()">
+				<option value="contains">包含</option>
+				<option value="is">是</option>
+			</select>&nbsp;&nbsp;
+		</li>
+		<li id="searchContent" class="pull-left">
+			<input id="searchs" type="text" class="input-medium search-query" name="search"/>&nbsp;&nbsp;
+			<input type="hidden" value="{$Think.get.type}" name="type" id="type"/>
+		</li>
+		<li class="pull-left">
+			<button class="btn" onclick="d_changeCondition(0)">{:L('SEARCH')}</button>
+		</li>
+	</ul>
+</div>
+<empty name="list">
+	<div class="alert">未找到相关结果</div>
+<else/>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+            <th>编号</th>
+            <th>供应商</th>
+            <th>主题</th>
+            <th>金额</th>
+		</tr>
+	</thead>
+	<tfoot id="footers">
+		<tr>
+			<td colspan="4">
+				<div class="row pagination">
+					<div class="span2"><span id="counts">{$count_num}</span> 条记录 <span id="ps">1</span>/<span id="total_pages">{$total}</span> 页</div>
+					<div class="span4">
+						<div>
+							<ul id="changepages">
+								<li><span class='current'>首页</span></li><li><span>« 上一页</span></li>
+								<if condition="1 lt $total">
+									<li><a class="page" href="javascript:void(0)" rel="2">下一页 »</a></li>
+								<else />
+									<li><span>下一页 »</span></li>
+								</if>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+	<tbody id="loads" class="hide">
+		<tr><td class="tdleft" <if condition="C('ismobile') neq 1">colspan="6"<else />colspan="4"</if> style=" height:300px;text-align:center"><img src="./Public/img/load.gif"></td></tr>
+	</tbody>
+	<tbody id="datas">
+		<volist name="list" id="vo">
+			<tr>
+				<td>
+					<input type="radio" name="purchase_id" value="{$vo.id}" rel="{$vo.id}" />
+				</td>
+				<td>{$vo.sn_code}</td>
+				<td>{$vo.supplier_name}</td>
+				<td>{$vo.subject}</td>
+				<td>{$vo.purchase_price}</td>
+			</tr>
+		</volist>
+	</tbody>
+</table>
+</empty>
+<script type="text/javascript">
+	$('.page').click(function(){
+		var a = $(this).attr('rel');
+		d_changeCondition(a);
+	});
+	function d_changeCondition(p){
+		$('#datas').addClass('hide');
+		$('#loads').removeClass('hide');
+		
+		var field = $('#fields').val();
+		var condition = $('#conditions').val();
+		var asearch = encodeURI($("#searchs").val());
+		var type = encodeURI($("#type").val());
+		$.ajax({
+			type:'get',
+			url:'index.php?m=purchase&a=changecontent&field='+field+'&search='+asearch+'&type='+type+'&condition='+condition+'&p='+p,
+			async:false,
+			success:function(data){			
+				var temp = '';
+				if(data.data.list != null){
+					$.each(data.data.list, function(k, v){
+						temp += "<tr><td><input type='radio' name='purchase_id' value='"+v.purchase_id+"'/></td>";
+						temp += "<td>"+v.sn_code+"</td>";
+						temp += "<td>"+v.supplier_name+"</td>";
+						temp += "<td>"+v.subject+"</td>";
+						temp += "<td>"+v.purchase_price+"</td>";
+                        temp +=  "</tr>";
+					});
+					var changepage = "";
+					if(data.data.p == 1){
+						changepage = "<li><span class='current'>首页</span></li><li><span>« 上一页</span></li>";
+						if(data.data.p < data.data.total){
+							changepage += "<li><a class='page' href='javascript:void(0)' rel='"+(data.data.p+1)+"'>下一页 »</a></li>";
+						}else{
+							changepage += "<li><span>下一页 »</span></li>";
+						}
+					}else if(data.data.p == data.data.total){
+						changepage = "<li><a class='page' href='javascript:void(0)' rel='1'>首页</a></li><li><a class='page' href='javascript:void(0)' rel='"+(data.data.p-1)+"'>« 上一页</a></li><li><span>下一页 »</span></li>";
+					}else{
+						changepage = "<li><a class='page' href='javascript:void(0)' rel='1'>首页</a></li><li><a class='page' href='javascript:void(0)' rel='"+(data.data.p-1)+"'>« 上一页</a></li><li><a class='page' href='javascript:void(0)' rel='"+(data.data.p+1)+"'>下一页 »</a></li>";
+					}				
+					$('#ps').html(data.data.p);
+					$('#changepages').html(changepage);
+					$('#counts').html(data.data.count);
+					$('#total_pages').html(data.data.total);				
+					$('#datas').html(temp);
+					$('.page').click(function(){
+						var a = $(this).attr('rel');
+						d_changeCondition(a);
+					});
+				}else{
+					$('#datas').html('<tr><td colspan="4">未找到相关结果</tr>');
+					$('#footers').addClass('hide');
+				}
+				$('#loads').addClass('hide');
+				$('#datas').removeClass('hide');
+			},
+			dataType:'json'
+		});		
+	}
+</script>

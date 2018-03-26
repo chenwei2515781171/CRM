@@ -1,0 +1,44 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Stock:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+		<div class="span2 knowledgecate">
+			<ul class="nav nav-list">
+				<li class="active">
+					<a href="javascript:void(0);">那类型查看</a>
+				</li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>销售单</a></li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>销售退货单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>采购单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>采购退货单</a></li>
+				<li><a class="active" href="{:U('stock/inout')}"><i class="icon-white icon-chevron-right"></i>出入库统计</a></li>
+				<li><a href="{:U('stock/out')}"><i class="icon-white icon-chevron-right"></i>出库统计</a></li>
+				<li><a href="{:U('stock/in')}"><i class="icon-white icon-chevron-right"></i>入库统计</a></li>
+			</ul>
+		</div>
+		<div class="span10">
+			<table class="table table-hover table-striped table_thead_fixed">
+				<thead>
+					<tr id="childNodes_num">
+						<th>产品名</th>
+						<th>出库</th>
+						<th>入库</th>
+					</tr>
+				</thead>
+				<tbody>
+					<volist name="data" id="vo">
+						<tr>
+							<td><a target="_blank" href="{:U('product/view','id='.$vo[product_id])}">{$vo.product_name}</a></td>
+							<td>{$vo.out}</td>
+							<td>{$vo.in}</td>
+						</tr>
+					</volist>					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<include file="Public:footer" />

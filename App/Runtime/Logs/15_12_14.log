@@ -1,0 +1,2693 @@
+[ 2015-12-14T11:45:29+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T11:58:15+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T11:58:28+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T12:00:41+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T12:01:21+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:01:45+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:01:58+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:02+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:02:07+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:11+08:00 ] 180.139.207.69 /index.php?m=finance
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivables`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivingorder`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:14+08:00 ] 180.139.207.69 /index.php?m=finance&a=view&t=receivables&id=200
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivables`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivingorder`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:15+08:00 ] 180.136.234.91 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:18+08:00 ] 180.136.234.91 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:02:21+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T12:02:49+08:00 ] 180.139.207.69 /index.php?m=finance&a=view&t=receivingorder&id=121
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivingorder`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_receivables`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = '200' ) LIMIT 1  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contract`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_business`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_supplier`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:05:32+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:05:34+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:05:40+08:00 ] 180.139.207.69 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:05:43+08:00 ] 180.139.207.69 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:07:02+08:00 ] 180.139.207.69 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:07:47+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:07:51+08:00 ] 180.139.207.69 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:07:59+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:08:04+08:00 ] 180.136.234.91 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:08:07+08:00 ] 180.136.234.91 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:08:10+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T12:10:34+08:00 ] 180.139.207.69 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:11:39+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:11:53+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:11:58+08:00 ] 180.136.234.91 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:13:45+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:13:56+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:14:06+08:00 ] 180.136.234.91 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:14:15+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:14:15+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T12:14:19+08:00 ] 180.139.207.69 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:14:23+08:00 ] 180.139.207.69 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:16:24+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_244_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:17:13+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_27d_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:17:58+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_2b1_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:19:19+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_313_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:28:37+08:00 ] 180.136.234.91 /index.php?m=sales&a=index
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_4b6_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:28:42+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_4be_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:28:46+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_4c9_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:28:52+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_4d6_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:28:58+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_4de_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:04+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_722_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:06+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_727_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:08+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_72a_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:11+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_72d_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:14+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_72f_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:42:21+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_735_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:45:35+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_7c1_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:46:02+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_7d9_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:46:06+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_7dc_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:46:39+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_7f9_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:49:50+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_8a1_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:54:28+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:54:32+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:54:45+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:55:14+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:55:31+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:55:34+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:56:04+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T12:56:25+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:56:29+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('2','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:56:41+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T12:57:32+08:00 ] 180.139.207.69 /index.php?m=sales&a=index&type=0&by=
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_a54_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) AND ( `type` = '0' ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:57:40+08:00 ] 180.139.207.69 /index.php?m=sales&a=index&type=0&by=
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_a5d_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) AND ( `type` = '0' ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:57:41+08:00 ] 180.139.207.69 /index.php?m=sales&a=index
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_a61_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:59:26+08:00 ] 180.139.207.69 /index.php?m=sales&a=index
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_ac9_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T12:59:52+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_ae1_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:00:02+08:00 ] 180.139.207.69 /index.php?m=sales&a=index&p=2
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_aea_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 15,15  
+
+[ 2015-12-14T13:02:40+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_b87_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:02:57+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_b99_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:03:08+08:00 ] 180.136.234.91 /index.php?m=sales&a=index
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_ba8_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:03:26+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_bb8_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('2','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:04:33+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_bee_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:10:59+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_d8b_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:11:04+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_d93_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:12:26+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_df8_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:14:37+08:00 ] 180.139.207.69 /index.php?m=customer&a=view&id=193
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT `log_id` FROM `crm_r_business_log` WHERE ( business_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in () ) 
+ERR: Unknown column 'receivables.customer_id' in 'where clause'
+ [ SQL语句 ] : SELECT receivables.receivables_id AS receivables_id,receivables.name AS name,receivables.price AS price,receivables.creator_role_id AS creator_role_id,receivables.owner_role_id AS owner_role_id,receivables.delete_role_id AS delete_role_id,receivables.is_deleted AS is_deleted,receivables.delete_time AS delete_time,receivables.pay_time AS pay_time,receivables.create_time AS create_time,receivables.description AS description,receivables.create_time AS create_time,receivables.status AS status,receivables.type AS type,receivables.bill_id AS bill_id,user.name AS creator_name FROM crm_receivables receivables LEFT JOIN crm_role role ON receivables.creator_role_id=role.role_id LEFT JOIN crm_user user ON role.user_id = user.user_id WHERE ( receivables.customer_id = 193 and receivables.is_deleted=0 ) 
+ERR: Unknown column 'payables.customer_id' in 'where clause'
+ [ SQL语句 ] : SELECT payables.payables_id AS payables_id,payables.name AS name,payables.price AS price,payables.creator_role_id AS creator_role_id,payables.owner_role_id AS owner_role_id,payables.delete_role_id AS delete_role_id,payables.delete_time AS delete_time,payables.is_deleted AS is_deleted,payables.pay_time AS pay_time,payables.create_time AS create_time,payables.update_time AS update_time,payables.description AS description,payables.type AS type,payables.bill_id AS bill_id,payables.status AS status,user.name AS creator_name FROM crm_payables payables LEFT JOIN crm_role role ON payables.creator_role_id=role.role_id LEFT JOIN crm_user user ON role.user_id = user.user_id WHERE ( payables.customer_id = 193 and payables.is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and contract.is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT contract.contract_id AS contract_id,contract.number AS number,contract.business_id AS business_id,contract.is_deleted AS is_deleted,contract.start_date AS start_date,contract.end_date AS end_date,contract.delete_role_id AS delete_role_id,contract.delete_time AS delete_time,contract.price AS price,contract.due_time AS due_time,contract.content AS content,contract.creator_role_id AS creator_role_id,contract.owner_role_id AS owner_role_id,contract.description AS description,contract.create_time AS create_time,contract.update_time AS update_time,contract.status AS status,contract.supplier_id AS supplier_id,contract.type AS type,business.name AS business_name,business.contacts_id AS contacts_id,business.customer_id AS customer_id,contacts.name AS contacts_name,customer.name AS customer_name,supplier.name AS supplier_name,user.name AS owner_name FROM crm_contract contract LEFT JOIN crm_business business ON contract.business_id=business.business_id LEFT JOIN crm_contacts contacts ON contacts.contacts_id=business.contacts_id LEFT JOIN crm_customer customer ON customer.customer_id=business.customer_id LEFT JOIN crm_supplier supplier ON contract.supplier_id=supplier.id LEFT JOIN crm_user user ON contract.owner_role_id=user.role_id WHERE ( contract.business_id in (%s) and contract.is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT r_business_product.business_id AS business_id,r_business_product.product_id AS product_id,r_business_product.sales_price AS sales_price,r_business_product.amount AS amount,r_business_product.description AS description,business.name AS name,product.name AS name,product.cost_price AS cost_price FROM crm_r_business_product r_business_product LEFT JOIN crm_business business ON r_business_product.business_id=business.business_id LEFT JOIN crm_product product ON r_business_product.product_id=product.product_id WHERE ( r_business_product.business_id in (%s) ) 
+
+[ 2015-12-14T13:15:06+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e58_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:15:11+08:00 ] 180.136.234.91 /index.php?m=sales&a=index
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e60_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('21','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:15:16+08:00 ] 180.139.207.69 /index.php?m=customer&a=view&id=192
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT `log_id` FROM `crm_r_business_log` WHERE ( business_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in () ) 
+ERR: Unknown column 'receivables.customer_id' in 'where clause'
+ [ SQL语句 ] : SELECT receivables.receivables_id AS receivables_id,receivables.name AS name,receivables.price AS price,receivables.creator_role_id AS creator_role_id,receivables.owner_role_id AS owner_role_id,receivables.delete_role_id AS delete_role_id,receivables.is_deleted AS is_deleted,receivables.delete_time AS delete_time,receivables.pay_time AS pay_time,receivables.create_time AS create_time,receivables.description AS description,receivables.create_time AS create_time,receivables.status AS status,receivables.type AS type,receivables.bill_id AS bill_id,user.name AS creator_name FROM crm_receivables receivables LEFT JOIN crm_role role ON receivables.creator_role_id=role.role_id LEFT JOIN crm_user user ON role.user_id = user.user_id WHERE ( receivables.customer_id = 192 and receivables.is_deleted=0 ) 
+ERR: Unknown column 'payables.customer_id' in 'where clause'
+ [ SQL语句 ] : SELECT payables.payables_id AS payables_id,payables.name AS name,payables.price AS price,payables.creator_role_id AS creator_role_id,payables.owner_role_id AS owner_role_id,payables.delete_role_id AS delete_role_id,payables.delete_time AS delete_time,payables.is_deleted AS is_deleted,payables.pay_time AS pay_time,payables.create_time AS create_time,payables.update_time AS update_time,payables.description AS description,payables.type AS type,payables.bill_id AS bill_id,payables.status AS status,user.name AS creator_name FROM crm_payables payables LEFT JOIN crm_role role ON payables.creator_role_id=role.role_id LEFT JOIN crm_user user ON role.user_id = user.user_id WHERE ( payables.customer_id = 192 and payables.is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and contract.is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT contract.contract_id AS contract_id,contract.number AS number,contract.business_id AS business_id,contract.is_deleted AS is_deleted,contract.start_date AS start_date,contract.end_date AS end_date,contract.delete_role_id AS delete_role_id,contract.delete_time AS delete_time,contract.price AS price,contract.due_time AS due_time,contract.content AS content,contract.creator_role_id AS creator_role_id,contract.owner_role_id AS owner_role_id,contract.description AS description,contract.create_time AS create_time,contract.update_time AS update_time,contract.status AS status,contract.supplier_id AS supplier_id,contract.type AS type,business.name AS business_name,business.contacts_id AS contacts_id,business.customer_id AS customer_id,contacts.name AS contacts_name,customer.name AS customer_name,supplier.name AS supplier_name,user.name AS owner_name FROM crm_contract contract LEFT JOIN crm_business business ON contract.business_id=business.business_id LEFT JOIN crm_contacts contacts ON contacts.contacts_id=business.contacts_id LEFT JOIN crm_customer customer ON customer.customer_id=business.customer_id LEFT JOIN crm_supplier supplier ON contract.supplier_id=supplier.id LEFT JOIN crm_user user ON contract.owner_role_id=user.role_id WHERE ( contract.business_id in (%s) and contract.is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT r_business_product.business_id AS business_id,r_business_product.product_id AS product_id,r_business_product.sales_price AS sales_price,r_business_product.amount AS amount,r_business_product.description AS description,business.name AS name,product.name AS name,product.cost_price AS cost_price FROM crm_r_business_product r_business_product LEFT JOIN crm_business business ON r_business_product.business_id=business.business_id LEFT JOIN crm_product product ON r_business_product.product_id=product.product_id WHERE ( r_business_product.business_id in (%s) ) 
+
+[ 2015-12-14T13:15:38+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e73_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:15:44+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e79_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:15:48+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e7f_9.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:15:51+08:00 ] 180.139.207.69 /index.php?m=sales&a=view&id=340
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+
+[ 2015-12-14T13:16:11+08:00 ] 180.139.207.69 /index.php?m=sales&a=view&id=340
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+
+[ 2015-12-14T13:16:18+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e92_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:16:31+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_e9a_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:17:01+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_eae_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:17:40+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_ec8_8.MYI'; try to repair it
+ [ SQL语句 ] : SELECT * FROM `crm_sales` LEFT JOIN crm_user ON crm_sales.sale_user_id = crm_user.role_id WHERE ( `create_user_id` IN ('1','13','2','21','22','26','14','24','10','18','20','6','11','19','25','27','28','23','8','9') ) ORDER BY id desc LIMIT 0,15  
+
+[ 2015-12-14T13:26:46+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_0.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_1.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_2.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_3.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_4.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_5.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_6.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_7.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_8.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_9.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fe7_a.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:26:48+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_0.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_1.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_2.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_3.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_4.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_5.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Incorrect key file for table 'C:\WINDOWS\TEMP\#sql75b8_fea_6.MYI'; try to repair it
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:26:51+08:00 ] 180.136.234.91 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:27:05+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:27:12+08:00 ] 180.136.234.91 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:28:25+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:28:30+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:28:55+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:28:58+08:00 ] 180.136.234.91 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:29:09+08:00 ] 180.136.234.91 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:29:24+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:29:32+08:00 ] 180.136.234.91 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:29:54+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:11+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:21+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=332
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:33+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=2
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:37+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=312
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:46+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=311
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:30:53+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=310
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:31:04+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=301
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:32:19+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:32:22+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:32:27+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:32:27+08:00 ] 180.136.234.91 /index.php?m=user&a=logout
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+
+[ 2015-12-14T13:32:33+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:32:39+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:32:53+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:32:54+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:33:20+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:33:23+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:33:26+08:00 ] 180.136.234.91 /index.php?m=customer
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:33:28+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:33:30+08:00 ] 180.136.234.91 /index.php?m=customer&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:34:09+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:34:16+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:34:26+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:34:32+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:34:46+08:00 ] 180.139.207.69 /index.php?m=user&a=logout
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+
+[ 2015-12-14T13:34:48+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:35:46+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:35:50+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:35:53+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:35:53+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:35:55+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:35:59+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:36:01+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:36:05+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:36:06+08:00 ] 180.136.234.91 /index.php?m=stock
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_stock`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:36:11+08:00 ] 180.136.234.91 /index.php?m=stock&a=inoutorder
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_purchase`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:36:21+08:00 ] 180.139.207.69 /index.php?m=user&a=logout
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+
+[ 2015-12-14T13:36:22+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:37:29+08:00 ] 180.139.207.69 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:37:31+08:00 ] 180.139.207.69 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:37:33+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:37:36+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:37:37+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:37:46+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:37:50+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:37:56+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:38:02+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=339
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:38:06+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:38:14+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:39:49+08:00 ] 180.136.234.91 /
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:39:54+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:39:58+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:39:58+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:40:00+08:00 ] 180.136.234.91 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:40:05+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:40:07+08:00 ] 180.139.207.69 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:40:16+08:00 ] 180.139.207.69 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:40:20+08:00 ] 180.139.207.69 /index.php?m=product&a=mutildialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:40:28+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:40:30+08:00 ] 180.139.207.69 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:40:38+08:00 ] 180.139.207.69 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:40:45+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:41:28+08:00 ] 180.136.234.91 /index.php?m=stock
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_stock`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:51:59+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:52:11+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:52:30+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:52:49+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=2
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:52:57+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=3
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:02+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=4
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:09+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=5
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:14+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=2
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:21+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=1
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:33+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:53:36+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=3
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:00+08:00 ] 180.136.234.91 /index.php?m=user&a=login
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_subcompany`
+
+[ 2015-12-14T13:54:06+08:00 ] 180.136.234.91 /index.php?m=index&a=index
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_announcement`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:09+08:00 ] 180.136.234.91 /index.php?m=sales
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:13+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:16+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=2
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:16+08:00 ] 180.136.234.91 /index.php?m=customer&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_contacts`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_r_contacts_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_customer`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+
+[ 2015-12-14T13:54:20+08:00 ] 180.136.234.91 /index.php?m=sales&a=index&p=3
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:54:28+08:00 ] 180.136.234.91 /index.php?m=sales&a=view&id=281
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T13:55:14+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:55:35+08:00 ] 180.136.234.91 /index.php?m=user&a=listDialog&by=all
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_position`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_role_department`
+
+[ 2015-12-14T13:55:53+08:00 ] 180.136.234.91 /index.php?m=product&a=listDialog
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_fields`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_data`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_product_category`
+
+[ 2015-12-14T13:56:16+08:00 ] 180.136.234.91 /index.php?m=sales&a=add
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_config`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_warehouse`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_sales_item`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_navigation`
+ERR: Got error 28 from storage engine
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_permission`
+
+[ 2015-12-14T14:07:55+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T14:07:58+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T14:08:03+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T14:08:08+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T14:08:11+08:00 ] ERR: (ThinkException) Can't connect to MySQL server on 'localhost' (10061)
+[ 2015-12-14T15:55:24+08:00 ] 180.139.207.69 /index.php?m=finance&a=view&t=receivingorder&id=121
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 200 ) LIMIT 1  
+
+[ 2015-12-14T16:58:09+08:00 ] 180.136.234.91 /index.php?m=product&a=view&id=206
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) ) 
+

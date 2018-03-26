@@ -1,0 +1,215 @@
+<include file="Public:header" />
+<div class="container">
+	
+	<!--div class="page-header">
+		<h4>{:L('FINANCE')}<small> - <a class="active" href="{:U('finance/index','t=receivables')}">{:L('RECEIVABLES')}</a> | 
+		<a href="{:U('finance/index','t=payables')}">{:L('PAYABLES')}</a> | 
+		<a href="{:U('finance/index','t=receivingorder')}">{:L('RECEIVINGORDER')}</a> | 
+		<a href="{:U('finance/index','t=paymentorder')}">{:L('PAYMENTORDER')}</a> | <a href="{:U('finance/analytics')}">{:L('STATISTICS')}</a></small> </h4>
+	</div-->
+	<include file="Public:alert" />	
+	<div class="row">
+		<div class="span12">
+			<form action="{:U('finance/edit','t=receivables')}" method="post">				
+				<input type='hidden' name="id" value="{$info['receivables_id']}"/>
+				<table class="table table-hover">
+					<tfoot>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE')}"/> &nbsp; <input class="btn" type="button" onclick="javascript:history.go(-1)" value="{:L('CANCEL')}"/></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<th colspan="2">{:L('EDIT RECEIVABLES')}</th>
+						</tr>
+						<tr>
+							<td class="tdleft" width="20%" valign="middle">{:L('RECEIVABLES NAME')}</td>
+							<td valign="middle"><input name="name" id="name" class="text-input large-input" type="text" value="{$info['name']}" /></td>
+						</tr>
+						<style>
+						<if condition="$info.type eq 1">
+							.type_2{display:none;}
+							<else/>
+							.type_1{display:none;}
+						</if>
+						</style>
+						<script>
+						 function type_change(tid){
+							if(tid==1){
+								$(".type_1").show();
+								$(".type_2").hide();
+							}else{
+								$(".type_2").show();
+								$(".type_1").hide();
+							}
+						 }
+						</script>
+						<tr>
+							<td width="15%" class="tdleft">类型</td>
+							<td>
+								<select name="type" onchange="type_change(this.value)">
+									<option value="1" <if condition="$info[type] eq 1">selected=selected</if>>销售</option>
+									<option value="2" <if condition="$info[type] eq 2">selected=selected</if>>采购退货</option>
+								</select>
+							</td>
+						</tr>
+						<tr class="type_1">
+							<td class="tdleft" width="20%" valign="middle">销售单号</td>
+							<td valign="middle">
+								<input name="sales_id" id="sales_id" type="hidden" value="<if condition="$info.type eq 1">{$info.bill_id}</if>"/>
+								<input name="sales_name" id="sales_name" class="text-input large-input" type="text" value="<if condition="$info.type eq 1">{$info.sn_code}</if>"/>
+							</td>
+						</tr>
+						<tr class="type_1">
+							<td class="tdleft" width="20%" valign="middle">客户</td>
+							<td valign="middle">
+								<input id="customer_name" class="text-input large-input" type="text" readonly="readonly" value="<if condition="$info.type eq 1">{$info.oname}</if>"/>
+							</td>
+						</tr>
+						<tr class="type_2">
+							<td class="tdleft" width="20%" valign="middle">采购退货单号</td>
+							<td valign="middle">
+								<input name="purchase_id" id="purchase_id" type="hidden" value="<if condition="$info.type eq 2">{$info.bill_id}</if>"/>
+								<input id="purchase_name" class="text-input large-input" type="text" value="<if condition="$info.type eq 2">{$info.sn_code}</if>"/>
+							</td>
+						</tr>
+						<tr class="type_2">
+							<td class="tdleft" width="20%" valign="middle">供应商</td>
+							<td valign="middle">
+								<input id="supplier_name" class="text-input large-input" type="text" readonly="readonly" value="<if condition="$info.type eq 2">{$info.oname}</if>"/>
+							</td>
+						</tr>
+						<!--tr>
+							<td class="tdleft" width="20%" valign="middle">{:L('CONTRACT')}</td>
+							<td valign="middle">
+							<input name="contract_id" id="contract_id" type="hidden" value="{$info['contract_id']}" />
+							<input name="contract_name" id="contract_name" class="text-input large-input" type="text" value="{$info['contract_name']}" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" width="20%" valign="middle">*{:L('CUSTOMER')}</td>
+							<td valign="middle"><input name="customer_id" id="customer_id" type="hidden" value="{$info['customer_id']}" /><input name="customer" id="customer" class="text-input large-input" type="text" value="{$info['customer_name']}" /></td>
+						</tr-->
+						<tr>
+							<td class="tdleft" valign="middle">{:L('AMOUNT OF RECEIVING')}</td>
+							<td valign="middle"><input class="text-input large-input" id="price" name="price" type="text" value="{$info['price']}" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('RECEIVING TIME')}</td>
+							<td valign="middle"><input onclick="WdatePicker()"  type="text" id="pay_time" name="pay_time" value="{$info['pay_time']|date="Y-m-d",###}" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('OWNER_ROLE')}</td>
+							<td valign="middle"><input type="hidden" id="owner_role_id" name="owner_role_id" value="{$info['owner_role_id']}" />
+							<input class="text-input large-input" id="owner_name" name="owner_name" type="text" value="{$info['owner']['user_name']}" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('DESCRIPTION')}</td>
+							<td valign="middle"><textarea class="span6" rows="6" name="description">{$info['description']}</textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div> <!-- End #tab1 -->	
+	</div> <!-- End #main-content -->	
+</div>
+<div id="dialog-message" title="选择销售单">loading...</div>
+<div id="dialog-message2" title="选择采购退货单">loading...</div>
+<div id="dialog-message3" title="{:L('SELECT THE LEADER')}">loading...</div>
+<script type="text/javascript">
+<if condition="C('ismobile') eq 1">width=$('.container').width() * 0.9;<else/>width=800;</if>
+$("#dialog-message").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item = $('input:radio[name="sales_id"]:checked').val();
+			var name = $('input:radio[name="sales_id"]:checked').parent().next().html();
+			var customer = $('input:radio[name="sales_id"]:checked').parent().next().next().html();
+			var sales_price = $('input:radio[name="sales_id"]:checked').parent().next().next().next().next().html();
+			if(item){
+				$('#sales_id').val(item);
+				$('#sales_name').val(name);
+				$('#customer_name').val(customer);
+				$('#price').val(sales_price);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+
+$("#dialog-message2").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item1 = $('input:radio[name="purchase_id"]:checked').val();
+			var name1 = $('input:radio[name="purchase_id"]:checked').parent().next().html();
+			var supplier = $('input:radio[name="purchase_id"]:checked').parent().next().next().html();
+			var price = $('input:radio[name="purchase_id"]:checked').parent().next().next().next().next().html();
+			if(item1){
+				$('#purchase_id').val(item1);
+				$('#purchase_name').val(name1);
+				$('#supplier_name').val(supplier);
+				$('#price').val(price);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+
+$("#dialog-message3").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item = $('input:radio[name="owner"]:checked').val();
+			var name = $('input:radio[name="owner"]:checked').parent().next().html();
+			if(item){
+				$('#owner_name').val(name);
+				$('#owner_role_id').val(item);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+$(function(){
+	$("#sales_name").click(
+		function(){
+			$('#dialog-message').dialog('open');
+			$('#dialog-message').load('{:U("sales/listDialog","type=0")}');
+		}
+	);
+	$("#purchase_name").click(
+		function(){
+			$('#dialog-message2').dialog('open');
+			$('#dialog-message2').load('{:U("purchase/listDialog","type=1")}');
+		}
+	);
+	$("#owner_name").click(
+		function(){
+			$('#dialog-message3').dialog('open');
+			$('#dialog-message3').load('{:U("user/listDialog","by=all")}');
+		}
+	);
+});
+</script>
+<include file="Public:footer" />	

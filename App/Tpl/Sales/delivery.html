@@ -1,0 +1,149 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Sales:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+			<div class="span12">
+				<div class="bulk-actions align-left">
+					<ul class="nav pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+							<li class="dropdown nav pull-left" style="margin-right:8px;">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i>&nbsp;配送进度<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{:U('sales/delivery')}" class="link">{:L('ALL')}</a></li>
+									<li>
+										<a href="{:U('sales/delivery','condition=eq&field=delivery_status&search=')}0" class="link">待配送</a>
+									</li>
+									<li>
+										<a href="{:U('sales/delivery','condition=eq&field=delivery_status&search=')}1" class="link">送货途中</a>
+									</li>
+									<li>
+										<a href="{:U('sales/delivery','condition=eq&field=delivery_status&search=')}2" class="link">已送达</a>
+									</li>
+								</ul>
+							</li>
+							<li class="pull-left">
+								&nbsp;
+								<select style="width:auto" id="field" name="field" onchange="changeCondition()">
+									<option class="word" value="sn_code">编号</option>
+									<option class="word" value="customer_name">客户名称</option>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li id="conditionContent" class="pull-left">
+							<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+								<option selected="selected" value="contains">{:L('CONTAINS')}</option>
+								<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+								<option value="is">{:L('IS')}</option>
+								<option value="isnot">{:L('ISNOT')}</option>
+								<option value="start_with">{:L('START_WITH')}</option>
+								<option value="end_with">{:L('END_WITH')}</option>
+								<option value="is_empty">{:L('IS_EMPTY')}</option>
+								<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+							</select>&nbsp;&nbsp;
+							</li>
+							<li id="searchContent" class="pull-left">
+								<input id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input name="m" value="sales" type="hidden">
+								<input name="a" value="delivery" type="hidden">
+								<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png">    {:L('SEARCH')}</button>&nbsp;
+							</li>
+						</form>
+					</ul>
+				</div>
+			</div>
+			<div class="span12" style="margin-top:10px;">
+				<form id="form1" method="Post">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+								<th>编号</th>
+								<th>客户名称</th>
+								<th>客户联系方式</th>
+								<th>配送地址</th>
+								<th>配送清单</th>
+								<th>配送员联系方式</th>
+								<th>配送进度</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="9">
+									{$page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="list" id="vo">
+								<tr>
+									<td><a target="_blank" href="{:U('sales/view','id=')}{$vo.id}">{$vo.sn_code}</a></td>
+									<td><a target="_blank" href="{:U('customer/view','id=')}{$vo.customer_id}">{$vo.customer_name}</a></td>
+									<td>{$vo.telephone}</td>
+									<td>{$vo.address}</td>
+									<td><a class="view_product" rel="{$vo.id}" href="javascript:void(0);">查看</a></td>
+									<td><if condition="!$vo[delivery_contact]"><a class="delivery_contact" rel="{$vo.id}" href="javascript:void(0);">添加</a><else/>{$vo.delivery_contact}&nbsp;<a class="delivery_contact" rel="{$vo.id}" href="javascript:void(0);">修改</a></if></td>
+									<td><if condition="isset($vo[delivery_status]) && $vo[delivery_status] eq 0">待送货&nbsp;&nbsp;<a class="edit_delivery_status" rel="{$vo.id}" href="javascript:void(0);">(修改状态)</a></if><if condition="$vo[delivery_status] eq 1">送货途中&nbsp;&nbsp;<a class="edit_delivery_status" rel="{$vo.id}" href="javascript:void(0);">(修改状态)</a></if><if condition="$vo[delivery_status] eq 2">已送达</if></td>
+								</tr>
+							</volist>
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="hide" id="dialog-edit-delivery-status" title="修改配送状态">loading...</div>
+<div class="hide" id="dialog-view-product" title="查看配送商品列表">loading...</div>
+<div class="hide" id="dialog-add-delivery-contact" title="添加配送联系方式">loading...</div>
+<script type="text/javascript">
+	width=800;
+	$(document).ready(function(){
+		$('#search').val('');
+		$("#field option[value='']").prop("selected", true);
+		$("#condition option[value='']").prop("selected", true);
+	});
+
+	$("#dialog-add-delivery-contact").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+	$('.delivery_contact').click(function(){
+		var sales_id = $(this).attr('rel');
+		$('#dialog-add-delivery-contact').dialog('open');
+		$('#dialog-add-delivery-contact').load('/index.php?m=sales&a=delivery_contact&id='+sales_id);
+	});
+
+	$("#dialog-view-product").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+
+	$('.view_product').click(function(){
+		var sales_id = $(this).attr('rel');
+		$('#dialog-view-product').dialog('open');
+		$('#dialog-view-product').load('/index.php?m=sales&a=product_list&id='+sales_id);
+	});
+	
+	$("#dialog-edit-delivery-status").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+
+	$('.edit_delivery_status').click(function(){
+		var sales_id = $(this).attr('rel');
+		$('#dialog-edit-delivery-status').dialog('open');
+		$('#dialog-edit-delivery-status').load('/index.php?m=sales&a=delivery_status&id='+sales_id);
+	});
+</script>
+<include file="Public:footer" />

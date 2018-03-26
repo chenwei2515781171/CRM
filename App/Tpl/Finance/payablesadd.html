@@ -1,0 +1,254 @@
+<include file="Public:header" />
+<div class="container">
+	
+	<div class="page-header">
+		<h4>{:L('FINANCE')}<small> - <a href="{:U('finance/index','t=receivables')}">{:L('RECEIVABLES')}</a> | 
+		<a class="active" href="{:U('finance/index','t=payables')}">{:L('PAYABLES')}</a> | 
+		<a href="{:U('finance/index','t=receivingorder')}">{:L('RECEIVINGORDER')}</a> | 
+		<a href="{:U('finance/index','t=paymentorder')}">{:L('PAYMENTORDER')}</a> | <a href="{:U('finance/analytics')}">{:L('STATISTICS')}</a></small> </h4>
+	</div>
+	<include file="Public:alert" />	
+	<div class="row">
+		<div class="span12">
+			<form action="{:U('finance/add','t=payables')}" method="post">				
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE')}"/> &nbsp; <if condition="C('ismobile') neq 1"><input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE AND NEW')}"/> &nbsp; </if><input class="btn" type="button" onclick="javascript:history.go(-1)" value="{:L('CANCEL')}"/></td>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE')}"/> &nbsp;  <if condition="C('ismobile') neq 1"><input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE AND NEW')}"/> &nbsp;</if> <input class="btn" type="button" onclick="javascript:history.go(-1)" value="{:L('CANCEL')}"/></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<th colspan="2">{:L('ADD PAYABLES')}</th>
+						</tr>
+						<tr>
+							<td class="tdleft" width="20%" valign="middle">{:L('PAYABLES NAME')}</td>
+							<td valign="middle"><input name="name" id="name" class="text-input large-input" type="text" /></td>
+						</tr>
+						<style>
+							.type_2{display:none;}
+						</style>
+						<script>
+						 function type_change(tid){
+							if(tid==1){
+								$(".type_1").show();
+								$(".type_2").hide();
+							}else{
+								$(".type_2").show();
+								$(".type_1").hide();
+							}
+						 }
+						</script>
+						<tr>
+							<td width="15%" class="tdleft">类型</td>
+							<td>
+								<select name="type" onchange="type_change(this.value)">
+									<option value="1">销售退货</option>
+									<option value="2">采购</option>
+								</select>
+							</td>
+						</tr>
+						<tr class="type_1">
+							<td class="tdleft" width="20%" valign="middle">销售退货单号</td>
+							<td valign="middle">
+								<input name="sales_id" id="sales_id" type="hidden" />
+								<input name="sales_name" id="sales_name" class="text-input large-input" type="text" />
+							</td>
+						</tr>
+						<tr class="type_1">
+							<td class="tdleft" width="20%" valign="middle">客户</td>
+							<td valign="middle">
+								<input id="customer_name" class="text-input large-input" type="text" readonly="readonly"/>
+							</td>
+						</tr>
+						<tr class="type_2">
+							<td class="tdleft" width="20%" valign="middle">采购单号</td>
+							<td valign="middle">
+								<input name="purchase_id" id="purchase_id" type="hidden" />
+								<input id="purchase_name" class="text-input large-input" type="text" />
+							</td>
+						</tr>
+						<tr class="type_2">
+							<td class="tdleft" width="20%" valign="middle">供应商</td>
+							<td valign="middle">
+								<input id="supplier_name" class="text-input large-input" type="text" readonly="readonly"/>
+							</td>
+						</tr>
+						<!--tr>
+							<td class="tdleft" width="20%" valign="middle">{:L('CONTRACT')}</td>
+							<td valign="middle"><input name="contract_id" id="contract_id" type="hidden" /><input name="contract_name" id="contract_name" class="text-input large-input" type="text" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" width="20%" valign="middle">*{:L('CUSTOMER')}</td>
+							<td valign="middle"><input name="customer_id" id="customer_id" type="hidden" /><input name="customer" id="customer" class="text-input large-input" type="text" /></td>
+						</tr-->
+						<tr>
+							<td class="tdleft" width="20%" valign="middle">{:L('OWNER_ROLE')}</td>
+							<td valign="middle"><input name="owner_role_id" id="owner_role_id" type="hidden" value="{$Think.session.role_id}"/><input name="owner_name" id="owner_name" value="{$Think.session.name}" class="text-input large-input" type="text" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('AMOUNT PAYABLE')}</td>
+							<td valign="middle"><input class="text-input large-input" id="price" name="price" type="text" /></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('PAYMENTORDER')}</td>
+							<td valign="middle"> &nbsp; <input type="checkbox" name="check_add_order" id="check_add_order" value="1"/>&nbsp;{:L('WHILE CREATING PAYMENTORDER')}<br/>
+								<table id="add_order" class="hide">
+									<tr>
+										<td class="tdleft" width="20%" valign="middle">{:L('PAYMENTS SINGLE NUMBER')}</td>
+										<td valign="middle"><input name="order_name" class="text-input large-input" type="text" value="{:L('AUTOMATIC_GENERATION')}"/></td>
+									</tr>
+									<tr>
+										<td class="tdleft" valign="middle">{:L('PAYMENTS')}</td>
+										<td valign="middle"><input class="text-input large-input" name="order_money" type="text" /></td>
+									</tr>
+									<tr>
+										<td class="tdleft" valign="middle">{:L('PAYMENT TIME')}</td>
+										<td valign="middle"><input onclick="WdatePicker()"  type="text" name="order_pay_time"/></td>
+									</tr>
+									<tr>
+										<td class="tdleft" valign="middle">{:L('STATUS')}</td>
+										<td valign="middle"><input  type="radio" checked="checked" name="order_status" value="0"/> {:L('NOT CLOSING')} <input type="radio"  name="order_status" value="1"/> {:L('HAS CLOSING')} </td>
+									</tr>
+									<tr>
+										<td class="tdleft" valign="middle">{:L('DESCRIPTION')}</td>
+										<td valign="middle"><textarea class="span4" rows="6" name="order_description"></textarea></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('PAYABLES TIME')}</td>
+							<td valign="middle"><input onclick="WdatePicker()"  type="text" id="pay_time" name="pay_time"/></td>
+						</tr>
+						<tr>
+							<td class="tdleft" valign="middle">{:L('DESCRIPTION')}</td>
+							<td valign="middle"><textarea class="span6" rows="6" name="description"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div> <!-- End #tab1 -->	
+	</div> <!-- End #main-content -->	
+</div>
+<div id="dialog-message" title="选择销售退货单">loading...</div>
+<div id="dialog-message2" title="选择采购单">loading...</div>
+<div id="dialog-message3" title="{:L('SELECT THE LEADER')}">loading...</div>
+<script type="text/javascript">
+<if condition="C('ismobile') eq 1">width=$('.container').width() * 0.9;<else/>width=800;</if>
+$("#dialog-message").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item = $('input:radio[name="sales_id"]:checked').val();
+			var name = $('input:radio[name="sales_id"]:checked').parent().next().html();
+			var customer = $('input:radio[name="sales_id"]:checked').parent().next().next().html();
+			var sales_price = $('input:radio[name="sales_id"]:checked').parent().next().next().next().next().html();
+			if(item){
+				$('#sales_id').val(item);
+				$('#sales_name').val(name);
+				$('#customer_name').val(customer);
+				$('#price').val(sales_price);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+$("#dialog-message2").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item1 = $('input:radio[name="purchase_id"]:checked').val();
+			var name1 = $('input:radio[name="purchase_id"]:checked').parent().next().html();
+			var supplier = $('input:radio[name="purchase_id"]:checked').parent().next().next().html();
+			var price = $('input:radio[name="purchase_id"]:checked').parent().next().next().next().next().html();
+			if(item1){
+				$('#purchase_id').val(item1);
+				$('#purchase_name').val(name1);
+				$('#supplier_name').val(supplier);
+				$('#price').val(price);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+$("#dialog-message3").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	buttons: {
+		"Ok": function () {
+			var item = $('input:radio[name="owner"]:checked').val();
+			var name = $('input:radio[name="owner"]:checked').parent().next().html();
+			if(item){
+				$('#owner_name').val(name);
+				$('#owner_role_id').val(item);
+			}
+			$(this).dialog("close");
+		},
+		"Cancel": function () {
+			$(this).dialog("close");
+		}
+	},
+	position: ["center", 100]
+});
+$(function(){
+	$("input[name='submit']").click(function(){			
+		if($("#name").val() == null || $("#name").val() == ""){
+			alert('应收款名不能为空！');
+			return false;
+		}
+	})
+	$("#sales_name").click(
+		function(){
+			$('#dialog-message').dialog('open');
+			$('#dialog-message').load('{:U("sales/listDialog","type=1")}');
+		}
+	);
+	$("#purchase_name").click(
+		function(){
+			$('#dialog-message2').dialog('open');
+			$('#dialog-message2').load('{:U("purchase/listDialog","type=0")}');
+		}
+	);
+	$("#owner_name").click(
+		function(){
+			$('#dialog-message3').dialog('open');
+			$('#dialog-message3').load('{:U("user/listDialog","by=all")}');
+		}
+	);
+	$("#check_add_order").click(
+		function(){
+			is_checked = $(this).prop("checked");
+			if(is_checked){
+				$('#add_order').show();
+			}else{
+				$('#add_order').hide();
+			}
+		}
+	);
+});
+</script>
+<include file="Public:footer" />	

@@ -1,0 +1,16 @@
+[ 2015-12-18T12:50:49+08:00 ] 180.136.235.113 /index.php?m=finance&a=view&t=receivingorder&id=122
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 204 ) LIMIT 1  
+
+[ 2015-12-18T12:51:14+08:00 ] 180.136.235.113 /index.php?m=finance&a=view&t=receivingorder&id=126
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 208 ) LIMIT 1  
+
+[ 2015-12-18T14:03:21+08:00 ] 180.136.235.113 /index.php?m=finance&a=view&t=receivingorder&id=127
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 209 ) LIMIT 1  
+
+[ 2015-12-18T14:39:15+08:00 ] 180.136.235.113 /index.php?m=finance&a=view&t=receivingorder&id=124
+ERR: Unknown column 'contract_id' in 'field list'
+ [ SQL语句 ] : SELECT `contract_id` FROM `crm_receivables` WHERE ( `receivables_id` = 206 ) LIMIT 1  
+

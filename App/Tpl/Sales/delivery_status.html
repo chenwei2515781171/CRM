@@ -1,0 +1,21 @@
+<form method="post" action="{:U('sales/delivery_status')}" class="form-horizontal">	
+	<table class="table">
+		<input type="hidden" value="{$Think.get.id}" name="id">
+		<tbody>
+			<tr>
+				<td width="20%" class="tdleft">配送进度：</td>
+				<td>
+					<select name="delivery_status">
+						<option value="0" <if condition="$data eq 0">selected="selected"</if>>待送货</option>
+						<option value="1" <if condition="$data eq 1">selected="selected"</if>>送货途中</option>
+						<option value="2" <if condition="$data eq 2">selected="selected"</if>>已送达</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="确定" name="submit" class="btn btn-primary"> &nbsp; <input type="button" value="取消" onclick="javascript:$('#dialog-advance').dialog('close');" class="btn"></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

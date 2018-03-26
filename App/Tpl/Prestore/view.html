@@ -1,0 +1,28 @@
+<table class="table table-hover table-striped table_thead_fixed">
+	<thead>
+		<tr>
+			<!--th>编号</th>
+			<th>次数</th-->
+			<th>日期</th>
+			<th>取酒数量</th>
+			<th>剩余数量</th>
+			<th>客户签名</th>
+			<th>仓管签名</th>
+			<th>备注</th>
+		</tr>
+	</thead>
+	<tbody>
+		<volist name="list" id="vo" key="k">
+			<tr>
+				<!--td>{$k}</td>
+				<td>{$vo.num}</td-->
+				<td>{$vo['time'] | date='Y-m-d',###}</td>
+				<td>{$vo.take_num}</td>
+				<td>{$vo.surplus_num}</td>
+				<td>{$vo.customer_sign}</td>
+				<td>{$vo.manage_sign}</a></td>
+				<td>{$vo.description}</a></td>
+			</tr>
+		</volist>
+	</tbody>					
+</table>

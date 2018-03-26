@@ -1,0 +1,265 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header">
+		<h3 class="text_center"><if condition="$assign[info][type] eq 1">采购退货单详情<else/>采购单详情</if><span class="span_code">—— {$assign.info.sn_code}</span></h3>
+		<div class="pannel_01">
+			<div class="pannel_02">
+				<span>{:L('SUPPLIER_NAME')}</span>
+				<input type="hidden" value="{$assign.info.supplier_id}"/>
+				<input type="text" value="{$assign.info.supplier_name}"/>
+			</div>
+			<div class="pannel_02 p_3">
+				<span>{:L('SUBJECT')}</span>
+				<input type="text" class="span2" value="{$assign.info.subject}" />
+			</div>
+			<div class="pannel_02 p_1">
+				<span>{:L('SALES_TIME')}</span>
+				<input type="text" class="span2" value="{$assign[info][purchase_time] | date='Y-m-d',###}"/>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12"></div>
+		<div class="span12" style="position:relative;">
+			<table class="table table-bordered" id="no-input-border" width="95%" border="0" cellspacing="1" cellpadding="0">
+				<thead>
+					<tr style="background-color:#E0E8FF;text-align:center;">
+						<td class="span1">&nbsp;</td>
+						<td class="span2">{:L('COMMODITY')}</td>
+						<td>{:L('STANDARD')}</td>
+						<td>{:L('COUNT')}</td>
+						<td>{:L('PRICE')}</td>
+						<td>{:L('DISCOUNT_RATE')}</td>
+						<td>{:L('PRODUCT_DISCOUNT')}</td>
+						<td>{:L('TAX_RATE')}</td>
+						<td>{:L('TAX_PRICE')}</td>
+						<td>{:L('NO_TAX_PRICE')}</td>
+						<td>{:L('PRIME_PRICE')}</td>
+						<td>{:L('WAREHOUSE')}</td>
+						<td class="span2">{:L('DESCRIPTION')}</td>
+					</tr>
+				</thead>
+				<tbody id="view_row">
+					<volist name="assign.product" id="vo" key="k">
+					<tr id="row_{$k}" class="onblur">
+						<td style="text-align:center;">
+							<a href="javascript:void(0);" class="reduce_one"><i class="icon-minus"></i></a>
+						</td>
+						<td>
+							<input name="sales[product][{$k}][product_id]" id="product_id_{$k}" class="product_id" type="hidden" value="{$vo.product_id}">
+							<input id="product_name_{$k}" onclick="loadDialog({$k})" type="text" value="{$vo.product_name}">
+						</td>
+						<td><input type="text" id="product_standard_{$k}" readonly="readonly" value="{$vo.product_standard}" name="purchase[product][{$k}][product_standard]"/></td>
+						<td><input name="sales[product][{$k}][amount]" id="product_amount_{$k}" class="amount" onblur="calculate({$k})" type="text" value="{$vo.amount}"></td>
+						<td><input name="sales[product][{$k}][unit_price]" id="product_unit_price_{$k}" onblur="calculate({$k})" type="text" value="{$vo.unit_price}"></td>
+						<td><input name="sales[product][{$k}][discount_rate]" id="product_discount_rate_{$k}" onblur="calculate({$k})" type="text" value="{$vo.discount_rate}"></td>
+						<td><input id="product_discount_{$k}" class="product_discount" readonly="readonly" type="text"></td>
+						<td><input name="sales[product][{$k}][tax_rate]" id="product_tax_rate_{$k}" onblur="calculate({$k})" type="text" value="{$vo.tax_rate}"></td>
+						<td><input id="product_tax_price_{$k}" class="tax_price" readonly="readonly" type="text"></td>
+						<td><input id="product_no_tax_price_{$k}" class="no_tax_price" readonly="readonly" type="text"></td>
+						<td><input name="sales[product][{$k}][prime_price]" id="product_prime_price_{$k}" class="prime_price" readonly="readonly" type="text" value="{$vo.prime_price}"></td>
+						<td>
+							<div class="divSelect">
+							<select name="sales[product][{$k}][warehouse_id]" id="product_warehouse_id_{$k}">
+								<volist name='assign.warehouse_list' id='v'>
+									<option <if condition="$vo[warehouse_id] eq $v[id]">selected="selected"</if> value="{$v.id}">{$v.name}</option>
+								</volist>
+							</select>
+							</div>
+						</td>
+						<td><input name="sales[product][{$k}][description]" type="text" value="{$vo.description}"></td>
+					</tr>
+					</volist>
+				</tbody>
+				<tbody id="add_products">
+				</tbody>
+				<tbody>
+					<tr style="background-color:#FFFFF3">
+						<td></td>
+						<td>{:L('TOTAL')}</td>
+						<td></td>
+						<td id="total_amount_val"></td>
+						<td></td>
+						<td></td>
+						<td id="total_product_discount_val"></td>
+						<td></td>
+						<td id="total_tax_price_val"></td>
+						<td id="total_no_tax_price_val"></td>
+						<td id="total_prime_price_val"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="background-color:#FFFFF1">
+						<td>&nbsp;</td>
+						<td>{:L('OTHER_PRICE')}</td>
+						<td colspan="2"><input name="other_expenses" id="discount_price" onblur="cal_discount_price()" type="text" value="{$assign.info.discount_price}"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>{:L('FINAL_PAY')}</td>
+						<td colspan="2"><input id="sales_price" readonly="true" value="{$assign.info.purchase_price}" type="text"></td>
+					</tr>
+					<tr>
+						<td>{:L('DESCRIPTION')}</td>
+						<td colspan="12"><textarea style="min-height:50px;width:99%" name="remarks">{$assign.info.description}</textarea></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td style="text-align:center;" colspan="13">
+							<input class="btn" type="button" onclick="javascript:history.go(-1)" value="返回"/>&nbsp;
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			<if condition="$assign.img neq ''">
+				<if condition="$assign.img eq 'audit'">
+					<div style="position: absolute;right: 14px;bottom: 200px;"><div style="font-size:20px;border:3px solid #CF3F3F;padding:10px 15px;color:#CF3F3F;font-weight:bold;transform:rotate(5deg);">{$assign.info.check_name} 审核</div></div>
+				<else/>
+					<div style="position: absolute;right: 200px;bottom: 200px;"><div style="font-size:20px;border:3px solid #CF3F3F;padding:10px 15px;color:#CF3F3F;font-weight:bold;transform:rotate(5deg);">{$assign.info.check_name} 审核</div></div>
+					<div style="position: absolute;right: 14px;bottom: 200px;"><img src="__PUBLIC__/img/{$assign.img}.png"></div>
+				</if>
+			</if>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(":input").attr('readonly','readonly');
+var nn = $('#view_row tr').size();
+for(i=1;i<=nn;i++){
+	calculate(i);
+}
+<!-- 根据选项计算价格 -->
+function calculate(param){
+	if($('#product_id_'+param).val() != '' && $('#product_id_'+param).val() != '0'){
+		//先对当前Row进行计算
+		var amount = $('#product_amount_'+param).val();
+		var unit_price = $('#product_unit_price_'+param).val();
+		var discount_rate = $('#product_discount_rate_'+param).val();
+		var product_discount = cal_discount_money(unit_price, amount, discount_rate);//折扣额
+		no_tax_price = parseFloat(unit_price * amount - product_discount).toFixed(2);//税前
+		var tax_rate = $('#product_tax_rate_'+param).val();
+		tax_price = cal_tax_money(tax_rate, no_tax_price);//税额
+		var prime_price = new Number(no_tax_price) + new Number(tax_price);//税后
+		$('#product_discount_'+param).val(product_discount);
+		$('#product_tax_price_'+param).val(tax_price);
+		$('#product_no_tax_price_'+param).val(no_tax_price);
+		$('#product_prime_price_'+param).val(prime_price.toFixed(2));
+		
+		var total_amount = 0;
+		$('.amount').each(function(k, v){
+			//合计数量
+			if($(v).val() != '' ||  $(v).val() != '0'){
+				total_amount += new Number($(v).val());
+			}
+		});
+		$('#total_amount_val').html(total_amount);
+		$('#total_amount').val(total_amount);
+		
+		var total_product_discount = 0.00;
+		$('.product_discount').each(function(k, v){
+			//合计折扣额
+			if($(v).val() != '' ||  $(v).val() != '0' || $(v).val() != '0.00'){
+				total_product_discount += new Number($(v).val());
+			}
+		});
+		$('#total_product_discount_val').html(total_product_discount.toFixed(2));
+		
+		var total_tax_price = 0.00;
+		$('.tax_price').each(function(k, v){
+			//合计税额
+			if($(v).val() != '' ||  $(v).val() != '0' || $(v).val() != '0.00'){
+				total_tax_price += new Number($(v).val());
+			}
+		});
+		$('#total_tax_price_val').html(total_tax_price.toFixed(2));
+		
+		var total_no_tax_price = 0.00;
+		$('.no_tax_price').each(function(k, v){
+			//合计税前
+			if($(v).val() != '' ||  $(v).val() != '0' || $(v).val() != '0.00'){
+				total_no_tax_price += new Number($(v).val());
+			}
+		});
+		$('#total_no_tax_price_val').html(total_no_tax_price.toFixed(2));
+		
+		var total_prime_price = 0.00;
+		$('.prime_price').each(function(k, v){
+			//实际应付总价（不包含其它费用）
+			if($(v).val() != '' || $(v).val() != '0.00' || $(v).val() != '0'){
+				total_prime_price += new Number($(v).val());
+			}
+		});
+		$('#total_prime_price_val').html(total_prime_price.toFixed(2));
+		$('#prime_price').val(total_prime_price.toFixed(2));
+		$('#purchase_price').val(total_prime_price.toFixed(2));
+		cal_discount_price();
+	}else{
+		return false;
+	}
+}
+<!-- 根据选项计算价格 END-->
+
+<!-- 根据其它费用计算最终应付金额 -->
+function cal_discount_price(){
+	var discount_price = $('#discount_price').val();
+	purchase_price = new Number($('#total_prime_price_val').html()) + new Number(discount_price);
+	$('#purchase_price').val(purchase_price.toFixed(2));
+}
+<!-- 根据其它费用计算最终应付金额 END-->
+
+<!-- 计算折扣额 -->
+/**
+ * 根据原价和折扣率计算出折扣额
+ * @unit_price		原价
+ * @amount			数量
+ * @discount_rate	折扣率
+ */
+function cal_discount_money(unit_price, amount, discount_rate){
+	var product_discount = 0;
+	if(discount_rate == 0){
+		product_discount = 0;
+	}else{
+		product_discount = (unit_price * amount) * (discount_rate/100);
+	}
+	return parseFloat(product_discount).toFixed(2);
+}
+<!-- 计算折扣额 END-->
+
+<!-- 计算税额 -->
+/**
+ * 根据税率和税前计算出税额
+ * @tax_rate		税率
+ * @no_tax_price	税前
+ */
+function cal_tax_money(tax_rate, no_tax_price){
+	var prime_price = 0;
+	prime_price = (tax_rate/100) * no_tax_price;
+	return parseFloat(prime_price).toFixed(2);
+}
+<!-- 计算税额 END-->
+
+//提交表单前进行数据校验
+$('input[name="submit"]').click(function(){
+	var supplier_id = $('#supplier_id').val();
+	if((supplier_id == '') || (supplier_id == '0')){
+		alert("请选择供应商！");
+		return false;
+	}
+	
+	var null_data_flag = true;
+	$('.product_id').each(function(k, v){
+		if(($(v).val()) > 0){
+			null_data_flag = false;
+		}
+	});
+	if(null_data_flag){
+		alert("商品信息不能为空！");
+		return false;
+	}
+});
+</script>

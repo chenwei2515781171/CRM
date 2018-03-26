@@ -1,0 +1,57 @@
+<include file="Public:m_header" />
+<div class="container">
+	 <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-12 content">
+
+		 <include file="Public:alert" />
+
+          <div class="well"><img style="height:30px;" src="__PUBLIC__/img/working_platform.png"/> &nbsp;{$Think.session.name}<a href="{:U('sales/m_add')}" id="add" class="btn btn-primary pull-right" ><i class="icon-plus"></i>添加销售单</a>
+        </div>
+
+		<div class="list-group" id="datas">
+		   <a href="javascript:void(0);" class="list-group-item active">
+		      <h4 class="list-group-item-heading">销售单列表</h4>
+		   </a>
+		   <volist name="list" id="vo">
+		    <a href="{:U('sales/m_edit','id=')}{$vo.id}" class="list-group-item clearfix">
+		      <h4 class="list-group-item-heading">
+		         {$vo.sn_code}<small class="pull-right" style="color:red;"><if condition="$vo[check_status] == '0'">未审核<else/><if condition="$vo[status] == '0'">已审核<else/>已出库</if></if></small>
+		      </h4>
+		      <p class="list-group-item-text">
+		         {$vo.customer_name}<span class="pull-right">金额：{$vo.sales_price}</span>
+		      </p>
+		   </a>
+		</volist>
+		</div>
+		<if condition="$count gt C('PAGE_SIZE')"><button type="button" onclick="getMore()" id="getMore" rel="2" class="btn btn-default btn-lg btn-block">加载更多...</button></if>
+		<hr>
+		</div>
+	</div>
+</div>
+<include file="Public:footer" />
+<script>
+function getMore(){
+	var p = $("#getMore").attr("rel");
+	$.ajax({
+		type:'get',
+		url:'index.php?m=sales&a=m_index&p='+p,
+		async:false,
+		success:function(data){
+			var temp = '';
+			if(data.data.list != null){
+				$.each(data.data.list, function(k, v){
+					temp += "<a href='{:U('sales/m_edit','id=')}"+v.id+"' class='list-group-item clearfix'>";
+					temp += "<h4 class='list-group-item-heading'>"+v.sn_code+"<small class='pull-right' style='color:red;'>"+v.zt+"</small></h4>";
+					temp += "<p class='list-group-item-text'>"+v.customer_name+"<span class='pull-right'>金额："+v.sales_price+"</span></p></a>";
+				});
+				$('#datas').append(temp);
+				$("#getMore").attr("rel",data.data.nextp);
+			}else{
+				$("#getMore").html("没有更多信息");
+			}
+		},
+		dataType:'json'
+	});		
+}
+</script>

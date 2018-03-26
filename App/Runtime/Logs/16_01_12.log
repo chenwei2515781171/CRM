@@ -1,0 +1,10 @@
+[ 2016-01-12T10:42:22+08:00 ] 113.12.144.147 /index.php?m=product&a=view&id=259
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) ) 
+

@@ -1,0 +1,132 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Sales:header" />
+		</div>
+		<div class="row">
+		<div class="span12">
+			<ul class="nav pull-left">
+				<li class="pull-left">
+					<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+						<ul class="nav pull-left">
+							<li class="pull-left">
+								{:L('SELECT_DEPARTMENT')}&nbsp; <select style="width:auto" name="department" id="department" onchange="changeRole()">
+									<option class="all" value="all">{:L('ALL')}</option>
+									<volist name="departmentList" id="vo">
+										<option value="{$vo.department_id}">{$vo.name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								{:L('SELECT_USER')}&nbsp; <select style="width:auto" name="role" id="role" onchange="changeCondition()">
+									<option class="all" value="all">{:L('ALL')}</option>
+									<volist name="roleList" id="vo">
+										<option value="{$vo.role_id}">{$vo.role_name}-{$vo.user_name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								{:L('DATE')}&nbsp; {:L('FROM')} <input id="start_time" name="start_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate span2" type="text"> {:L('TO')} <input id="end_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" name="end_time" class="Wdate span2" type="text">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input name="m" value="sales" type="hidden">
+								<input name="a" value="analyticssales" type="hidden">
+								<button type="submit" class="btn">  {:L('SEARCH')}</button>
+							</li>
+						</ul>
+					</form>
+				</li>				
+			</ul>
+		</div>
+		<div class="span2 knowledgecate">
+			<ul class="nav nav-list">
+				<li class="active">
+					<a href="javascript:void(0);">{:L('ANALYTICS_TYPE')}</a>
+				</li>
+				<li><a href="{:U('sales/analyticssales')}" class="active"><i class="icon-white icon-chevron-right"></i>销售记录</a></li>
+				<li><a href="{:U('sales/salestongji')}"><i class="icon-white icon-chevron-right"></i>销售</a></li>
+				<li><a href="{:U('sales/zengpintongji')}"><i class="icon-white icon-chevron-right"></i>赠品</a></li>
+				<li><a href="{:U('sales/ziyongtongji')}"><i class="icon-white icon-chevron-right"></i>自用</a></li>
+				<li><a href="{:U('sales/analyticsprice')}"><i class="icon-white icon-chevron-right"></i>销售提成(柱状图)</a></li>
+				<li><a href="{:U('sales/analyticstable')}"><i class="icon-white icon-chevron-right"></i>销售提成(表格)</a></li>
+			</ul>
+		</div>
+		<div class="span10" id="an_chart" style="margin-left: 0px;">			
+			<div id="report_content">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th style="text-align:center;height:30px;line-height:30px;border:1px #F0F0F0 solid;" colspan="8">{:L('SALES_ANALYTICS')}</th>
+						</tr>
+						<tr>
+							<th>{:L('SN_CODE')}</th>
+							<th>{:L('SUBJECT')}</th>
+							<th>{:L('COUNT')}</th>
+							<th>{:L('AMOUNT')}</th>
+							<th>{:L('CREATE_TIME')}</th>
+							<th>参与分成人员</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr style="background: #029BE2;color: #fff;font-size: 13px;" colspan="8">
+							<td>{:L('ADD_ALL')}：</td>
+							<td>&nbsp;</td>
+							<td>{$assign.sales_count_all}</td>
+							<td>{$assign.sales_price_all}</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<volist name="assign.list" id="vo">
+						<tr>
+							<td><a href="{:U('sales/view','id=')}{$vo.id}" target="_blank">{$vo.sn_code}</a></td>
+							<td>{$vo.subject}</td>
+							<td>{$vo.sales_count}</td>
+							<td>{$vo.sales_price}</td>
+							<td>{$vo['create_time']|date="Y-m-d",###}</td>
+							<td><volist name="vo[fc]" id="v"><a rel="{$key}" class="role_info" href="javascript:void(0);">{$v}</a>&nbsp;&nbsp;</volist></td>
+						</tr>
+						</volist>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<script>
+width=600;
+$("#dialog-role-info").dialog({
+    autoOpen: false,
+    modal: true,
+	width: width,
+	maxHeight: 450,
+	position: ["center",100]
+});
+$(function(){
+	$(".role_info").click(function(){
+		var role_id = $(this).attr('rel');
+		$('#dialog-role-info').dialog('open');
+		$('#dialog-role-info').load('{:U('user/dialoginfo','id=')}'+role_id);
+	});
+});
+function changeRole(){
+	department_id = $("#department option:selected").val();
+	$.ajax({
+		type:'get',
+		url:'{:U('user/getrolebydepartment','department_id=')}'+department_id,
+		async:true,
+		success:function(data){
+			options = '<option value="">全部</option>';
+			if(data.data != null){
+				$.each(data.data, function(k, v){
+					options += '<option value="'+v.role_id+'">'+v.role_name+"-"+v.user_name+'</option>';
+				});
+			}
+			$("#role").html(options);
+					},
+		dataType:'json'});
+}
+</script>
+<include file="Public:footer" />

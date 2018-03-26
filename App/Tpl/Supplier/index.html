@@ -1,0 +1,173 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Supplier:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+			<div class="span12">
+				<div class="bulk-actions align-left">
+					<div class="pull-left">
+						<a id="delete" class="btn" style="margin-right: 5px;"><i class="icon-remove"></i>&nbsp;{:L('DELETE')}</a>
+					</div>
+					<ul class="nav pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+							<li class="pull-left">
+								&nbsp;
+								<select style="width:auto" id="field" name="field" onchange="changeCondition()">
+									<option selected="selected" class="word" value="name">{:L('NAME')}</option>
+									<option value="category_id">{:L('SUPPLIER_CATEGORY')}</option>
+									<option class="role" value="owner_id">{:L('CREATOR_ROLE')}</option>
+									<option class="date" value="create_time">{:L('CREATE_TIME')}</option>
+									<option class="date" value="update_time">{:L('UPDATE_DATE')}</option>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li id="conditionContent" class="pull-left">
+							<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+								<option selected="selected" value="contains">{:L('CONTAINS')}</option>
+								<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+								<option value="is">{:L('IS')}</option>
+								<option value="isnot">{:L('ISNOT')}</option>
+								<option value="start_with">{:L('START_WITH')}</option>
+								<option value="end_with">{:L('END_WITH')}</option>
+								<option value="is_empty">{:L('IS_EMPTY')}</option>
+								<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+							</select>&nbsp;&nbsp;
+							</li>
+							<li id="searchContent" class="pull-left">
+								<input id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input name="m" value="supplier" type="hidden">
+								<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png">    {:L('SEARCH')}</button>&nbsp;
+							</li>
+						</form>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="{:U('supplier/add')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_SUPPLIER')}</a>
+				</div>
+			</div>
+			<div class="span12">
+				<form id="form" method="Post">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+								<th style="width: 71px;"><input class="check_all" name="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th style="width: 267px;">{:L('NAME')}</th>
+								<th style="width: 141px;">{:L('CATEGORY')}</th>
+								<th style="width: 267px;">{:L('CREATOR_ROLE')}</th>
+								<th style="width: 188px;">{:L('CREATE_TIME')}</th>
+								<th style="width: 174px;">{:L('OPERATING')}</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="6">
+									{$assign.page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="assign.list" id="vo">
+								<tr>
+									<td style="width: 71px;">
+										<input class="check_list" name="ids[]" value="{$vo.id}" type="checkbox">
+									</td>
+									<td style="width: 267px;">{$vo.name}</td>
+									<td style="width: 141px;">{$vo.category_name}</td>
+									<td style="width: 267px;"><a class="role_info" href="javascript:void(0);" rel="{$vo.owner_id}">{$vo.user_name}</a></td>
+									<td style="width: 188px;">{$vo[create_time] | date="Y-m-d",###}</td>									
+									<td style="width: 174px;">
+										<a href="{:U('supplier/view','id=')}{$vo.id}">{:L('VIEW')}</a>&nbsp;&nbsp;
+										<a class="edit_supplier" rel="{$vo.id}" href="javascript:void(0);">{:L('EDIT')}</a>&nbsp;&nbsp;
+										<a href="{:U('supplier/delete','id=')}{$vo.id}">{:L('DELETE')}</a>
+									</td>
+								</tr>
+							</volist>
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<div class="hide" id="dialog-edit-supplier" title="{:L('EDIT')}{:L('SUPPLIER')}">loading...</div>
+<script type="text/javascript">
+	$('#field').change(function(){
+		var values = $(this).val();
+		if(values == 'category_id'){
+			$.ajax({
+				type: "GET",
+				url: "/index.php?m=supplier&a=getcategory",
+				data: '',
+				dataType: "json",
+				success: function(data){
+					category_html = '<select id="search" style="width:auto" name="search">';
+					$(data).each(function(k,v){
+						category_html +='<option value="'+v.id+'">'+v.name+'</option>';
+					});
+					category_html +='</select>';
+					$('#conditionContent').html('');
+					$('#searchContent').html(category_html);
+				}
+			});
+		}
+	});
+	
+	$(document).ready(function(){
+		$('#search').val('');
+		$("#field option[value='']").prop("selected", true);
+		$("#condition option[value='']").prop("selected", true);
+
+		$('.edit_supplier').click(function(){
+			var supplier_id = $(this).attr('rel')
+			$('#dialog-edit-supplier').dialog('open');
+			$('#dialog-edit-supplier').load('/index.php?m=supplier&a=edit&id='+supplier_id);
+		});
+
+		$(".role_info").click(function(){
+			$role_id = $(this).attr('rel');
+			$('#dialog-role-info').dialog('open');
+			$('#dialog-role-info').load('/index.php?m=user&a=dialoginfo&id='+$role_id);
+		});
+
+		$("#check_all").click(function(){
+			$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+		});
+
+		$('#delete').click(function(){
+			if(confirm("确定要删除么？")){
+				$("#form").attr('action', '/index.php?m=supplier&a=delete');
+				$("#form").submit();
+			}else{
+				return false;
+			}
+		});
+	});
+	
+	$("#dialog-edit-supplier").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			'确定':function(){
+				$('#edit_supplier_form').submit();
+			},
+			'取消':function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+	
+	$("#dialog-role-info").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+	});
+</script>
+<include file="Public:footer" />

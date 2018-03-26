@@ -1,0 +1,1 @@
+<?php	return array ( 'name' => '广西汇禹天成商贸有限公司', 'description' => '开源免费的客户关系管理系统', 'state' => '广西壮族自治区', 'city' => '南宁市', 'allow_file_type' => 'pdf,doc,jpg,png,gif,txt,doc,xls,zip,docx', 'contract_alert_time' => 30, 'task_model' => '1', 'logo' => NULL, );?>

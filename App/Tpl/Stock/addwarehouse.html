@@ -1,0 +1,16 @@
+<form method="post" action="{:U('stock/addwarehouse')}" id="add_warehouse_form" class="form-horizontal">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th colspan="2">{:L('WAREHOUSE')}{:L('SETTING')}</th>
+			</tr>
+			<tr>
+				<td class="tdleft span2">{:L('NAME')}</td>
+				<td><input type="text" name="base[name]" class="span3"></td>
+			</tr>
+				<tr><td class="tdleft">{:L('DESCRIPTION')}</td>
+				<td><textarea style="min-height:80px" class="span4" name="base[description]"></textarea></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

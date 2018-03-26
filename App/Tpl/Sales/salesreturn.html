@@ -1,0 +1,168 @@
+<include file="Public:header" />
+	<div class="container">
+		<div style="margin-top:10px; font-size:14px;">
+			<ul class="nav nav-tabs">
+			  <li>
+				<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=index"><img src="re_files/xiaoshou.png">&nbsp; 销售单</a>
+			  </li>
+			  <li class="active"><a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn"><img src="re_files/tuihuo.png"> &nbsp;销售退货单</a></li>
+			  <li><a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=analyticsorder"><img src="re_files/tongji.png"> &nbsp;统计</a></li>
+			</ul>
+		</div>
+				<p class="view">
+			<b>销售视图：</b>
+			<img src="re_files/by_owner.png"> <a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn" class="active">全部</a> |
+			<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn&amp;by=not_check">未审核</a> | 
+			<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn&amp;by=checked">已审核</a> | 
+		</p>
+        <div class="row">
+			<div class="span12">
+				<div class="pull-left">
+					<ul class="nav pull-left">
+						<li class="pull-left">
+							<a id="delete" class="btn" style="margin-right: 5px;"><i class="icon-remove"></i>删除</a>
+						</li>
+						<li class="pull-left">
+							<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="index.php" method="get">
+								<ul class="nav pull-left">
+									<li class="pull-left">
+										&nbsp;&nbsp;
+										<select id="field" style="width:auto" onchange="changeCondition()" name="field">
+											<option selected="selected" class="text" value="sn_code">编号</option>
+											<option class="text" value="subject">主题</option>
+											<option class="text" value="customer_name">客户名</option>
+											<option class="sales_status" value="status" rel="salesreturn">状态</option>
+											<option class="role" value="creator_role_id">制单人</option>
+											<option class="date" value="create_time">创建时间</option>
+											<option class="date" value="update_time">更新时间</option>
+										</select>&nbsp;&nbsp;
+									</li>
+									<li id="conditionContent" class="pull-left"><select id="condition" style="width:auto" name="condition" onchange="changeSearch()"><option selected="selected" value="contains">包含</option><option value="not_contain">不包含</option><option value="is">是</option><option value="isnot">否</option><option value="start_with">开始字符</option><option value="end_with">结束字符</option><option value="is_empty">为空</option><option value="is_not_empty">不为空</option></select>&nbsp;&nbsp;</li>
+									<li id="searchContent" class="pull-left"><input id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;</li>
+									<li class="pull-left">
+										<input name="m" value="sales" type="hidden">
+										<input name="a" value="salesreturn" type="hidden">
+																				<button type="submit" class="btn"> <img src="re_files/search.png">    搜索</button>
+									</li>
+								</ul>
+							</form>
+						</li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=addsalesreturn"><i class="icon-plus"></i>&nbsp; 新增销售退货单</a>&nbsp;&nbsp;
+				</div>
+			</div>
+			<div class="span12">
+				<form id="form1" action="/index.php?m=sales&amp;a=salesreturn" method="Post">
+					<table class="table table-hover table-striped table_thead_fixed">
+												<thead>
+							<tr id="childNodes_num">
+								<th style="width: 43px;"><input class="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th style="width: 36px;">&nbsp;</th>
+								<th style="width: 169px;">编号</th>
+								<th style="width: 89px;">主题</th>
+								<th style="width: 211px;">客户</th>
+								<th style="width: 68px;">状态</th>
+								<th style="width: 68px;">财务</th>
+								<th style="width: 72px;">
+																			<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn&amp;desc_order=sales_price">金额</a>								</th>
+								<th style="width: 48px;">
+																			<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn&amp;desc_order=total_amount">数量</a>								</th>
+								<th style="width: 69px;">制单人</th>
+								<th style="width: 120px;">
+																			<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=salesreturn&amp;desc_order=create_time">创建时间</a>								</th>
+								<th style="width: 55px;">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="width: 43px;">
+									<input name="sales_id[]" class="check_list" value="40" type="checkbox">
+								</td>
+								<td style="width: 36px;"><img src="re_files/check.png" class="list_check"></td>
+								<td style="width: 169px;"><a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=editsalesreturn&amp;id=40">THD2014121640</a></td>
+								<td style="width: 89px;"><a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=editsalesreturn&amp;id=40">测试主题</a></td>
+								<td style="width: 211px;"><a href="http://crm.cloud.5kcrm.com/index.php?m=customer&amp;a=view&amp;id=62" target="_blank">上海瑞达科技有限公司</a></td>
+								<td style="width: 68px;">
+																			已入库								</td>
+								<td style="width: 68px;">
+									未付款																	</td>
+								<td style="width: 72px;">491.50</td>
+								<td style="width: 48px;">10</td>
+								<td style="width: 69px;"><a href="javascript:void(0);" class="role_info" rel="16">boss</a></td>
+								<td style="width: 120px;">2014-12-16</td>
+								<td style="width: 55px;">
+									<a href="http://crm.cloud.5kcrm.com/index.php?m=sales&amp;a=editsalesreturn&amp;id=40">编辑</a>&nbsp;
+																	</td>
+							</tr>						</tbody>						<tfoot>
+							<tr>
+								<td colspan="12" id="td_colspan">
+									<p>提示：<img src="re_files/check.png" width="17">&nbsp;已审核</p>
+									 <div class="row pagination"><div class="span2">共1 条记录 1/1 页</div><div class="span"><div><ul><li><span>首页</span></li><li><span>« 上一页</span></li><li></li><li><span>下一页 »</span></li><li><span>末页</span></li></ul></div></div><div class="span2">跳转至第<select style="width:auto;display:inline-block;" name="p" onchange="go_pagep(this.value)"><option value="/index.php?m=sales&amp;a=salesreturn&amp;p=1" selected="selected">1</option></select><script type="text/javascript">
+        function go_pagep(page){
+            window.location = page;
+        }
+        </script>页</div> 								</div></td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	
+<script type="text/javascript">
+width=600;$("#dialog-role-info").dialog({
+    autoOpen: false,
+    modal: true,
+	width: width,
+	maxHeight: 400,
+	position: ["center",100]
+});
+$("#dialog-import").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	position: ["center",100]
+});
+function changeContent(){
+	a = $("#select1  option:selected").val();
+	window.location.href="/index.php?m=sales&a=index&by="+a;
+}
+$(function(){
+	$("#field option[value='status_id']").prop("selected", true);changeCondition();
+	$("#check_all").click(function(){
+		$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+	});
+	$('#delete').click(function(){
+		var confirm_result = confirm('警告：您正在删除的数据与其它信息有关联，删除该数据后，将连带删除相关信息，请谨慎处理！');
+				if(confirm_result){
+			$("#form1").attr('action', '/index.php?m=sales&a=delete');
+			$("#form1").submit();
+		}
+	});
+
+	$(".role_info").click(function(){
+		$role_id = $(this).attr('rel');
+		$('#dialog-role-info').dialog('open');
+		$('#dialog-role-info').load('/index.php?m=user&a=dialoginfo&id='+$role_id);
+	});
+});
+
+$('.operation_tips').click(function(){
+	if(confirm('确定要进行该操作么？')){
+		return true;
+	}else{
+		return false;
+	}
+});
+$nodes_num = document.getElementById("childNodes_num").children.length;
+	$("#td_colspan").attr('colspan',$nodes_num);</script><div aria-labelledby="ui-id-4" aria-describedby="dialog-role-info" role="dialog" tabindex="-1" style="display: none; position: fixed;" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-id-4">员工信息</span><button title="close" aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div style="display: block;" class="hide ui-dialog-content ui-widget-content" id="dialog-role-info">loading...</div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-n"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-e"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-s"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-w"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-sw"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-ne"></div><div style="z-index: 90;" class="ui-resizable-handle ui-resizable-nw"></div></div>
+
+
+<a href="javascript:void(0);" class="backToTop" title="返回顶部" style="text-decoration: none; display: none; position: absolute; top: 643px; left: 1321px;">&nbsp;</a>
+
+<include file="Public:footer" />

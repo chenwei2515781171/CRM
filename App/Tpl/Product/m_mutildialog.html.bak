@@ -1,0 +1,124 @@
+<style>
+.se_product {
+	background:#E0E0E0;
+	width: auto;
+	margin-left: 10px;
+	float: left;
+	font-size: 12px;
+	padding: 2px;
+	border: 1px #C0C0C0 solid;
+	border-radius: 4px;
+}
+</style>
+<div class="clearfix">
+	<ul class="nav pull-left">
+		<input type="hidden" id="field" value="name">
+		<input type="hidden" id="condition" value="contains">
+		<input id="search" type="text" class="input-small search-query" name="search">
+  		<button type="submit" class="btn" onclick="d_changeCondition(0)"><i class="icon-search"></i> {:L('SEARCH')}</button>
+	</ul>
+</div>
+	<div class="result"></div>
+<table class="table" style="margin-top:10px;">
+	<tbody id="data">
+		<volist name="product_list" id="vo">
+			<tr>
+				<td>
+					<input type="checkbox" name="product_id" class="product_id" value="{$vo.product_id}" />
+					<input type="hidden" value="{$vo.suggested_price}"/>
+				</td>
+				<td>{$vo.name}</td>
+				<!--td>{$vo.category_name}</td-->
+			</tr>
+		</volist>
+	</tbody>	
+</table>
+
+<script type="text/javascript">
+	$("#check_all").click(function(){
+		$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+	});
+	function d_changeCondition(p){
+		$('#data').addClass('hide');
+		var field = $('#field').val();
+		var condition = $('#condition').val();
+		var search = encodeURI($("#search").val());
+		$.ajax({
+			type:'get',
+			url:'index.php?m=product&a=changecontent&field='+field+'&search='+search+'&condition='+condition+'&p='+p,
+			async:false,
+			success:function(data){
+				var temp = '';
+				if(data.data.list != null){
+					$.each(data.data.list, function(k, v){
+						var checked = checkRes(v.product_id) ? 'checked=checked' : '';
+						temp += '<tr><td><input type="checkbox" class="product_id" name="product_id" '+checked+' class="check_list" value="'+v.product_id+'"/><input type="hidden" value="'+v.suggested_price+'"/><input type="hidden" value="'+v.standard+'"/></td><td>'+v.name+'</td></tr>';
+					});
+					$('#data').html(temp);
+				}else{
+					$('#data').html('<tr><td colspan="4">没有找到您要的结果！</tr>');
+				}
+				$('#data').removeClass('hide');
+				selaction();
+			},
+			dataType:'json'
+		});		
+	}
+	
+	//检查已选择产品 如果存在则删除
+	function checkDelRes(pid){
+		var res_id =  new Array();
+		$(".se_product").each(function(){
+			//res_id.push($(this).attr('rel'));
+			if(pid == $(this).attr('rel')) $(this).remove();
+		});
+	}
+	//检查产品是否存在 返回false or true；
+	function checkRes(pid){
+		var res = false;
+		$(".se_product").each(function(){
+			if(pid == $(this).attr('rel')) res = true;
+		});
+		return res;
+		
+	}
+	
+	selaction();
+	bindaction();
+	
+	function selaction(){
+		//选择产品时 如果勾选则添加 否则删除
+		$('.product_id').click(function(){
+			var checked = $(this).prop('checked');
+			var pid = $(this).val();
+			if(checked){
+				var pname = $(this).parent().next().text();
+				var price = $(this).next().val();
+				var standard = $(this).next().next().val();
+
+				$('.result').append('<div class="se_product" rel="'+$(this).val()+'">'+pname+'<input type="hidden" name="suggested_price" value="'+price+'"/><i class="icon-remove remove"></i></div>');
+				bindaction();
+			}else{
+				checkDelRes(pid);
+			}
+			
+		});
+	}
+	
+	function bindaction(){
+		//删除按钮
+		$('.remove').click(function(){
+			$(this).parent().remove();
+		});
+		
+		//删除按钮颜色变化
+		$('.remove').hover(
+			function(){
+				$(this).css('color','red');
+			},
+			function(){
+				$(this).css('color','');
+			}
+		);
+	}
+</script>

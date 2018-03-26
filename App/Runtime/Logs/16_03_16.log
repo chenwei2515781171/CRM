@@ -1,0 +1,28 @@
+[ 2016-03-16T10:00:18+08:00 ] 180.136.206.181 /index.php?m=finance&a=zengsong&customer=all&role=all&start_time=&end_time=&act=zsexcel
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-16T13:47:38+08:00 ] 180.136.206.181 /index.php?m=stock&a=out&product=undefined&warehouse=undefined&start_time=&end_time=&act=outexcel
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-16T13:48:30+08:00 ] 180.136.206.181 /index.php?m=stock&a=out&product=undefined&warehouse=undefined&start_time=&end_time=&act=outexcel
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-16T13:50:54+08:00 ] 180.136.206.181 /index.php?m=stock&a=out&product=undefined&warehouse=undefined&start_time=&end_time=&act=outexcel
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-16T13:51:49+08:00 ] 180.136.206.181 /index.php?m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-16T14:23:58+08:00 ] 180.136.206.181 /index.php?m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+

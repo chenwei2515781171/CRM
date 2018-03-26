@@ -1,0 +1,49 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header">
+		<h4><a name="tab">{:L('STOCK_DETAILS')}</a>
+		</h4>
+	</div>
+		<div class="row">
+		<div class="tabbable span12">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#" data-toggle="tab">{:L('BASE_INFO')}</a></li>
+			</ul>
+			<div class="tab-content">
+				<table class="table" style="margin-bottom:0px;" border="0" cellpadding="0" cellspacing="1">
+					<thead>
+						<tr>
+							<td colspan="4">
+								<span style="font-size: 14px;">
+									<a href="javascript:void(0)" onclick="javascript:history.go(-1)">{:L('RETURN')}</a>
+								</span>
+							</td>
+						</tr>
+						<tr><th colspan="4">{:L('BASE_INFO')}</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+							<td class="tdleft" width="15%">{:L('NAME')}</td>
+							<td><a href="{:U('product/view', 'id='.$info['product_id'])}" target="_blank">{$info.product_name}</a></td>
+							<td class="tdleft">TYPE</td>
+							<td>{$info.product_category}</td>
+						</tr>
+						<tr>
+							<td class="tdleft" width="15%">{:L('STANDARD')}</td>
+							<td>{$info.product_standard}</td>
+							<td class="tdleft">{:L('STOCK')}</td>
+							<td>{$info.amounts}</td>
+						</tr>
+						<tr>
+							<td class="tdleft" width="15%">{:L('WAREHOUSE')}</td>
+							<td>{$info.warehouse_name}</td>
+							<td class="tdleft">{:L('LAST_CHANGE_TIME')}</td>
+							<td>{$info[last_change_time] | date='Y-m-d h:i:s',###}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public:footer" />

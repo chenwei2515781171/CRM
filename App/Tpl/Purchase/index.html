@@ -1,0 +1,223 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Supplier:header" />
+		</div>
+		<include file="Public:alert" />
+		<p class="view">
+			<b>{:L('PURCHASE_ORDER_VIEW')}：</b>
+			<img src="__PUBLIC__/img/by_owner.png"> <a href="{:U('purchase/index')}" class="active">{:L('ALL_PURCHASE')}</a> |
+			<a href="{:U('purchase/index','by=not_check&type='.$assign['type'])}">{:L('NO_CHECk_PURCHASE')}</a> | 
+			<a href="{:U('purchase/index','by=checked&type='.$assign['type'])}">{:L('CHECK_PURCHASE')}</a> | 
+		</p>
+        <div class="row">
+			<div class="span2 knowledgecate">
+				<ul class="nav nav-list">
+					<li class="active">
+						<a href="javascript:void(0);">{:L('SELECT_TYPE_VIEW')}</a>
+					</li>
+					<li>
+						<a href="{:U('purchase/index')}" <if condition="$assign[type] neq '0' && $assign[type] neq '1'">class="active"</if>>
+							<i class="icon-white icon-chevron-right"></i>{:L('ALL_PURCHASE')}</a>
+					</li>
+					<li>
+						<a href="{:U('purchase/index','type=0&by='.$assign['by'])}" <if condition="$assign[type] == '0'">class="active"</if>>
+							<i class="icon-chevron-right"></i>{:L('PURCHASE_ORDER')}</a>
+					</li>
+					<li>
+						<a href="{:U('purchase/index','type=1&by='.$assign['by'])}" <if condition="$assign[type] == '1'">class="active"</if>>
+							<i class="icon-chevron-right"></i>{:L('RETURN_PURCHAE')}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="span10">
+				<div class="pull-left">
+					<ul class="nav pull-left">
+						<li class="pull-left">
+							<a id="delete" class="btn"><i class="icon-remove"></i>{:L('DELETE')}</a>
+						</li>
+						<li class="pull-left">
+							<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="index.php" method="get">
+								<ul class="nav pull-left">
+									<li class="pull-left">
+										&nbsp;
+										<select id="field" style="width:auto" onchange="changeCondition()" name="field">
+											<option class="text" value="sn_code">{:L('SN_CODE')}</option>
+											<option class="text" value="subject">{:L('SUBJECT')}</option>
+											<option class="text" value="supplier_name">{:L('SUPPLIER_NAME')}</option>
+											<option class="role" value="create_user_id">{:L('CREATE_PURCHASE_PRESON')}</option>
+											<option class="date" value="create_time">{:L('CREATE_TIME')}</option>
+											<option class="date" value="update_time">{:L('UPDATE_TIME')}</option>
+										</select>&nbsp;&nbsp;
+									</li>
+									<li id="conditionContent" class="pull-left">
+										<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+											<option selected="selected" value="contains">{:L('CONTAINS')}</option>
+											<option value="not_contain">{:L('NOT_CONTAINS')}</option>
+											<option value="is">{:L('IS')}</option>
+											<option value="isnot">{:L('ISNOT')}</option>
+											<option value="start_with">{:L('START_WITH')}</option>
+											<option value="end_with">{:L('END_WITH')}</option>
+											<option value="is_empty">{:L('IS_EMPTY')}</option>
+											<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+										</select>&nbsp;&nbsp;
+									</li>
+									<li id="searchContent" class="pull-left"><input value="" id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;</li>
+									<li class="pull-left">
+										<input name="m" value="purchase" type="hidden">
+										<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png">{:L('SEARCH')}</button>
+									</li>
+								</ul>
+							</form>
+						</li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="{:U('purchase/add','type=0')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_PURCHASE')}</a>&nbsp;&nbsp;
+					<a class="btn btn-primary" href="{:U('purchase/add','type=1')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_PURCHASE_RETURN')}</a>
+				</div>
+			</div>
+			
+			<div class="span10">
+				<form id="form" action="{:U('purchase/index')}" method="Post">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr id="childNodes_num">
+								<th><input class="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th style="width:17px;">&nbsp;</th>
+								<th>{:L('SN_CODE')}</th>
+								<th>{:L('SUBJECT')}</th>
+								<th>{:L('SUPPLIER_NAME')}</th>
+								<th>{:L('TYPE')}</th>
+								<th>{:L('STATUS')}</th>
+								<th>{:L('FINANCE_STATUS')}</th>
+								<th>{:L('AMOUNT')}</th>
+								<th>{:L('COUNT')}</th>
+								<th>{:L('CREATE_PURCHASE_PRESON')}</th>
+								<th>{:L('CREATE_TIME')}</a></th>
+								<th>{:L('OPERATING')}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<volist name="assign.list" id="vo">
+								<tr>
+									<td>
+										<input <if condition="$vo.status eq 1">disabled="true"</if> name="ids[]" class="check_list" value="{$vo.id}" type="checkbox">
+									</td>
+									<td>
+										<if condition="$vo.check_status eq 1 ">
+											<img src="__PUBLIC__/img/check.png" class="list_check">
+										</if>
+									</td>
+									<td>
+										<a href="{:U('purchase/view','id=')}{$vo.id}">{$vo.sn_code}</a>
+									</td>
+									<td>{$vo.subject}</td>
+									<td><a href="{:U('supplier/view','id=')}{$vo.supplier_id}" target="_blank">{$vo.supplier_name}</a></td>
+									<td>
+										<if condition="$vo.type eq 1">
+											{:L('TYPE_1')}
+										<else />
+											{:L('TYPE_0')}
+										</if>
+									</td>
+									<if condition="$vo.type eq 0">
+										<if condition="$vo.status eq 1">
+											<td>{:L('YRK')}</td>
+										<else/>
+											<td>{:L('WRK')}</td>
+										</if>
+									<else/>
+										<if condition="$vo.status eq 1">
+											<td>{:L('YCK')}</td>
+										<else/>
+											<td>{:L('WCK')}</td>
+										</if>
+									</if>
+									<td>{$vo.finance}</td>
+									<td>{$vo.purchase_price}</td>
+									<td>{$vo.total_amount}</td>
+									<td><a href="javascript:void(0);" class="role_info" rel="{$vo.create_user_id}">{$vo.create_user_name}</a></td>
+									<td>{$vo.create_time|date="Y-m-d",###}</td>
+									<td>
+										<a href="{:U('purchase/view','id='.$vo['id'])}">{:L('VIEW')}</a>&nbsp;
+										<if condition="$vo.check_status eq 0">
+											<a class="operation_tips" href="{:U('purchase/check','id='.$vo['id'])}">审核</a>&nbsp;
+										<else/>
+											<if condition="$vo.status eq 0">
+												<a class="operation_tips" href="{:U('purchase/removecheck','id='.$vo['id'])}">撤销审核</a>&nbsp;
+											</if>
+										</if>
+										<if condition="$vo.status neq 1">
+											<a href="{:U('purchase/edit','id='.$vo['id'])}">{:L('EDIT')}</a>&nbsp;
+											<a class="operation_tips" href="{:U('purchase/delete','id='.$vo['id'])}">{:L('DELETE')}</a>
+										</if>
+									</td>
+								</tr>
+							</volist>						
+						</tbody>						
+						<tfoot>
+							<tr>
+								<td colspan="12">
+									<p>{:L('HINT')}：<img width="17" src="__PUBLIC__/img/check.png">{:L('IS_CHECK')}</p>
+									{$assign.page}
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	<div class="hide" id="dialog-role-info" title="{:L('EMPLOYEE_INFO')}">loading...</div>	
+<script type="text/javascript">
+width=600;
+$("#dialog-role-info").dialog({
+    autoOpen: false,
+    modal: true,
+	width: width,
+	maxHeight: 400,
+	position: ["center",100]
+});
+$("#dialog-import").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width,
+	maxHeight: 400,
+	position: ["center",100]
+});
+function changeContent(){
+	a = $("#select1  option:selected").val();
+	window.location.href="{:U('purchase/index','by=')}"+a;
+}
+$(function(){
+	$("#field option[value='status_id']").prop("selected", true);changeCondition();
+	$("#check_all").click(function(){
+		$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+	});
+	$('#delete').click(function(){
+		var confirm_result = confirm('警告：您正在删除的数据与其它信息有关联，删除该数据后，将连带删除相关信息，请谨慎处理！');
+				if(confirm_result){
+			$("#form").attr('action', '{:U('purchase/delete')}');
+			$("#form").submit();
+		}
+	});
+	$(".role_info").click(function(){
+		$role_id = $(this).attr('rel');
+		$('#dialog-role-info').dialog('open');
+		$('#dialog-role-info').load('{:U('user/dialoginfo','id=')}'+$role_id);
+	});
+});
+$('.operation_tips').click(function(){
+	if(confirm("确定要进行该操作么？")){
+		return true;
+	}else{
+		return false;
+	}
+});
+$nodes_num = document.getElementById("childNodes_num").children.length;
+	$("#td_colspan").attr('colspan',$nodes_num);</script>
+
+</body>
+</html>

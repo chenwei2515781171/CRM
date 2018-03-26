@@ -1,0 +1,194 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header" style="border:none; font-size:14px;">
+		<include file="Sales:header" />
+	</div>
+	<include file="Public:alert" />
+	<p class="view">
+		<b>{:L('SALES_VIEW_NAV')}：</b>
+		<img src="__PUBLIC__/img/by_owner.png"> <a href="{:U('sales/index')}" <if condition="!isset($assign[by])||$assign[by]==''">class="active"</if>>{:L('ALL')}</a> | <a href="{:U('sales/index','by=not_check&type='.$assign['type'])}" <if condition="$assign[by] == 'not_check'">class="active"</if>>{:L('NOT_CHECK_SALES')}</a> | <a href="{:U('sales/index','by=checked&type='.$assign['type'])}" <if condition="$assign[by] == 'checked'">class="active"</if>>{:L('CHECKED_SALES')}</a> | 
+	</p>
+	<div class="row">
+		<div class="span2 knowledgecate">
+			<ul class="nav nav-list">
+				<li class="active">
+					<a href="javascript:void(0);">{:L('SELECT_TYPE_VIEW')}</a>
+				</li>
+				<li>
+					<a href="{:U('sales/index')}" <if condition="!isset($assign[type])||$assign[type]==''">class="active"</if>><i class="icon-white icon-chevron-right"></i>{:L('ALL')}</a>
+				</li>
+				<li>
+					<a href="{:U('sales/index','type=0&by='.$assign['by'])}" <if condition="$assign[type] == '0'">class="active"</if>><i class="icon-chevron-right"></i>{:L('SALES_TICKET')}</a>
+				</li>
+				<li>
+					<a href="{:U('sales/index','type=1&by='.$assign['by'])}" <if condition="$assign[type] == '1'">class="active"</if>><i class="icon-chevron-right"></i>{:L('SALES_RETURN')}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="span10">
+			<div class="pull-left">
+				<ul class="nav pull-left">
+					<li class="pull-left" style="margin-right:5px;">
+						<a id="delete" class="btn"><i class="icon-remove"></i>{:L('DELETE')}</a>
+					</li>
+					<li class="pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="index.php" method="get">
+							<ul class="nav pull-left">
+								<li class="pull-left">
+									<select style="width:auto" name="field" id="field" onchange="changeCondition()">
+										<option class="word" value="sn_code">{:L('SN_CODE')}</option>
+										<option class="word" value="subject">{:L('SUBJECT')}</option>
+										<option class="word" value="customer_name">{:L('CUSTOMER_NAME')}</option>
+										<option class="role" value="create_user_id">{:L('CREATE_SALES_PERSON')}</option>
+										<option class="date" value="create_time">{:L('CREATE_TIME')}</option>
+										<option class="date" value="update_time">{:L('UPDATE_TIME')}</option>	
+									</select>&nbsp;&nbsp;
+								</li>
+								<li id="conditionContent" class="pull-left">
+									<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+										<option value="contains">{:L('CONTAINS')}</option>
+										<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+										<option value="is">{:L('IS')}</option>
+										<option value="isnot">{:L('ISNOT')}</option>						
+										<option value="start_with">{:L('START_WITH')}</option>
+										<option value="end_with">{:L('END_WITH')}</option>
+										<option value="is_empty">{:L('IS_EMPTY')}</option>
+										<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+									</select>&nbsp;&nbsp;
+								</li>
+								<li id="searchContent" class="pull-left"><input id="search" type="text" class="input-medium search-query" name="search"/>&nbsp;&nbsp;</li>
+								<li class="pull-left"><input type="hidden" name="m" value="sales"/>
+								<if condition="$Think.get.by neq ''"><input type="hidden" name="by" value="{$Think.get.by}"/></if>
+								<if condition="$Think.get.type neq ''"><input type="hidden" name="type" value="{$Think.get.type}"/></if>
+								<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png"/>  {:L('SEARCH')}</button></li>
+							</ul>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<a class="btn btn-primary" href="{:U('sales/add')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_SALES')}</a>&nbsp;&nbsp;
+				<a class="btn btn-primary" href="{:U('sales/add','type=1')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_SALES_RETURN')}</a>
+			</div>
+		</div>
+		<div class="span10">
+			<form id="form" action="{:U('sales/delete')}" method="Post">
+				<table class="table table-hover table-striped table_thead_fixed">
+					<thead>
+						<tr>
+							<th><input class="check_all" id="check_all" type="checkbox" /></th>
+							<th></th>
+							<th>{:L('SN_CODE')}</th>
+							<th>{:L('SUBJECT')}</th>
+							<th>{:L('CUSTOMER')}</th>
+							<th>{:L('SALES_STATUS')}</th>
+							<th>{:L('AMOUNT')}</th>
+							<th>{:L('COUNT')}</th>
+							<th>{:L('FINANCE')}</th>
+							<th>{:L('CREATE_SALES_PERSON')}</th>
+							<th>销售员</th>
+							<th>{:L('CREATE_TIME')}</th>
+							<th>{:L('OPERATING')}</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="14">
+								<p>{:L('HINT')}：<img width="17" src="__PUBLIC__/img/check.png">{:L('IS_CHECK')}</p>
+								{$assign.page}
+							</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<volist name="assign.list" id="vo">
+							<tr>
+								<td>
+									<input <if condition="$vo.status eq 1">disabled="true"</if> type="checkbox" class="check_list" name="ids[]" value="{$vo.id}"/>
+								</td>
+								<if condition="$vo.check_status eq 1">
+									<td><img src="__PUBLIC__/img/check.png"></td>
+								<else/>
+									<td></td>
+								</if>
+								<td>{$vo.sn_code}</td>
+								<td>{$vo['subject']}</td>
+								<td><a target="_blank" href="{:U('customer/view','id='.$vo['customer_id'])}">{$vo['customer_name']}</a></td>
+								<if condition="$vo.type eq 0">
+									<if condition="$vo.status eq 1">
+										<td>{:L('YCK')}</td>
+									<else/>
+										<td>{:L('WCK')}</td>
+									</if>
+								<else/>
+									<if condition="$vo.status eq 1">
+										<td>{:L('YRK')}</td>
+									<else/>
+										<td>{:L('WRK')}</td>
+									</if>
+								</if>
+								<td>{$vo['sales_price']}</td>
+								<td>{$vo['sales_count']}</td>
+								<td>{$vo['finance']}</td>
+								<td><a rel="{$vo['create_user_id']}" class="role_info" href="javascript:void(0);">{$vo['create_user_name']}</a></td>
+								<td>{$vo['name']}</td>
+								<td>{$vo['create_time']|date="Y-m-d",###}</td>
+								<td style="width: 150px;">
+									<a href="{:U('sales/view','id='.$vo['id'])}">{:L('VIEW')}</a>&nbsp;
+									<if condition="$vo.check_status eq 0">
+										<a class="operation_tips" href="{:U('sales/check','id='.$vo['id'])}">{:L('CHECK')}</a>&nbsp;
+									<else/>
+										<if condition="$vo.status eq 0">
+											<a class="operation_tips" href="{:U('sales/removecheck','id='.$vo['id'])}">{:L('REMOVE_CHECK')}</a>&nbsp;
+										</if>
+									</if>
+									<if condition="$vo.status neq 1">
+										<a href="{:U('sales/edit','id='.$vo['id'])}">{:L('EDIT')}</a>&nbsp;
+										<a class="operation_tips" href="{:U('sales/delete','id='.$vo['id'])}">{:L('DELETE')}</a>
+									</if>
+								</td>
+							</tr>
+						</volist>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<script type="text/javascript">
+//全选
+$("#check_all").click(function(){
+	$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+});
+//批量删除提示
+$('#delete').click(function(){
+	var confirm_result = confirm('警告：您正在删除的数据与其它信息有关联，删除该数据后，将连带删除相关信息，请谨慎处理！');
+	if(confirm_result){
+		$("#form").attr('action', '{:U('sales/delete')}');
+		$("#form").submit();
+	}
+});
+//单个删除提示
+$('.operation_tips').click(function(){
+	if(confirm("确定要进行该操作么？")){
+		return true;
+	}else{
+		return false;
+	}
+});
+//制单人点击弹窗
+$(".role_info").click(function(){
+	var role_id = $(this).attr('rel');
+	$('#dialog-role-info').dialog('open');
+	$('#dialog-role-info').load('{:U('user/dialoginfo','id=')}'+role_id);
+});
+//制单人弹窗开启
+$("#dialog-role-info").dialog({
+	autoOpen: false,
+	modal: true,
+	width: 600,
+	maxHeight: 500,
+	position: ["center",100]
+});
+</script>
+<include file="Public:footer" />

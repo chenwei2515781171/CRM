@@ -1,0 +1,31 @@
+[ 2016-03-01T10:15:43+08:00 ] 180.136.202.38 /index.php?m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-01T10:15:54+08:00 ] 180.136.202.38 /index.php?product=all&warehouse=all&supplier_name=all&start_time=&end_time=&act=search&acts=inexcel&m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-01T10:15:59+08:00 ] 180.136.202.38 /index.php?product=all&warehouse=all&supplier_name=all&start_time=&end_time=&act=search&acts=inexcel&m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-01T10:16:04+08:00 ] 180.136.202.38 /index.php?product=all&warehouse=all&supplier_name=all&start_time=&end_time=&act=search&acts=inexcel&m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-03-01T11:40:04+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:40:49+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:42:13+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:43:00+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:49:21+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:49:51+08:00 ] ERR: (ThinkException) 无法加载模块:Stock
+[ 2016-03-01T11:49:55+08:00 ] ERR: (ThinkException) 无法加载模块:Stock

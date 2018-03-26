@@ -1,0 +1,31 @@
+<include file="Public:m_header" />
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-12 col-sm-12">
+          
+        <include file="Public:alert" />
+
+          <div class="well"><img style="height:30px;" src="__PUBLIC__/img/working_platform.png"/> &nbsp;{$Think.session.name}<!--a href="/web.php?m=index&a=widget_add" id="add" class="btn btn-primary pull-right" ><i class="icon-plus"></i>{:L('ADD_THE_COMPONENT')}</a-->
+        </div>
+
+        <empty name="widget">
+                {:W('Welcome')}
+        <else />
+                
+          <volist name="widget" id="vo">
+          {:W($vo['widget'], $vo)}
+          </volist>
+        </empty>
+
+        </div><!--/.col-xs-12.col-sm-9-->
+      </div><!--/row-->
+      <hr>
+      <footer>
+        <p>© 龙讯互动</p>
+      </footer>
+
+    </div><!--/.container-->
+
+<include file="Public:footer" />

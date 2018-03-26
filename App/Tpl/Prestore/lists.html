@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="{:L('AUTHOR')}">
+    <title>{:C('defaultinfo.name')} - Powered By {:L('AUTHOR')}</title>
+	<link type="text/css" href="__PUBLIC__/css/bootstrap.min.css?t=20140830" rel="stylesheet" />
+	<link type="text/css" href="__PUBLIC__/css/bootstrap-responsive.min.css?t=20140830" rel="stylesheet">
+	<link type="text/css" href="__PUBLIC__/css/jquery-ui-1.10.0.custom.css?t=20140830" rel="stylesheet" />
+	<script src="__PUBLIC__/js/bootstrap.min.js?t=20140830" type="text/javascript"></script>
+</head>
+<body>
+
+<table class="table table-hover table-striped table_thead_fixed">
+	<thead>
+		<tr>
+			<th>取酒</th>
+			<th>剩余</th>
+			<th>日期</th>
+		</tr>
+	</thead>
+	<tbody>
+		<volist name="list" id="vo" key="k">
+			<tr>
+				<td>{$vo.take_num}</td>
+				<td>{$vo.surplus_num}</td>
+				<td>{$vo['time'] | date='Y-m-d',###}</td>
+			</tr>
+		</volist>
+	</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs">
+	<li <if condition="$assign[active] == 'sales/index'">class="active"</if>><a href="{:U('sales/index')}"><img src="__PUBLIC__/img/xiaoshou.png">&nbsp; {:L('SALES_TICKET')}</a></li>
+	<li <if condition="$assign[active] == 'sales/delivery'">class="active"</if>><a href="{:U('sales/delivery')}"><img src="__PUBLIC__/img/customer_source_icon.png"> &nbsp;{:L('DELIVERY_MANAGE')}</a></li>
+	<li <if condition="$assign[active] == 'sales/analyticssales'">class="active"</if>><a href="{:U('sales/analyticssales')}"><img src="__PUBLIC__/img/tongji.png"> &nbsp;{:L('STATISTICS')}</a></li>
+	<li <if condition="$assign[active] == 'sales/bonus_pool'">class="active"</if>><a href="{:U('sales/bonus_pool')}"><img src="__PUBLIC__/img/tongji.png"> &nbsp;{:L('BONUS_POOL')}</a></li>
+</ul>	

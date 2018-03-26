@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs">
+	<li <if condition="$assign[active] == 'index'">class="active"</if>>
+		<a href="{:U('stock/index')}"><img src="__PUBLIC__/img/kucun.png">&nbsp; {:L('STOCK')}</a>
+	</li>
+	<li <if condition="$assign[active] == 'inoutorder'">class="active"</if>>
+		<a href="{:U('stock/inoutorder')}"><img src="__PUBLIC__/img/caigou.png">&nbsp; {:L('INOUTORDER')}</a>
+	</li>
+	<li <if condition="$assign[active] == 'warehouse'">class="active"</if>>
+		<a href="{:U('stock/warehouse')}"><img src="__PUBLIC__/img/cangku.png">&nbsp; {:L('WAREHOUSE')}</a>
+	</li>
+	<li <if condition="$assign[active] == 'inout'">class="active"</if>>
+		<a href="{:U('stock/inout')}"><img src="__PUBLIC__/img/cangku.png">&nbsp; 出入库统计</a>
+	</li>
+</ul>

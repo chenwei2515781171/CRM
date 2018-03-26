@@ -1,0 +1,49 @@
+<form method="post" action="{:U('sales/delivery_contact')}" class="form-horizontal">
+	<table class="table">
+		<input type="hidden" value="{$Think.get.id}" name="id">
+		<tbody>
+			<tr>
+				<td>选中配送方式：</td>
+				<td><span class="role btn btn-primary">员工送货</span> &nbsp; <span class="other btn">物流送货</span></td>
+			</tr>
+			<tr class="role_box">
+				<td width="20%" class="tdleft">员工姓名：</td>
+				<td><input type="text" name="name" value="{$info.name}"/></td>
+			</tr>
+			<tr class="role_box">
+				<td width="20%" class="tdleft">员工电话：</td>
+				<td><input type="text" name="tel" value="{$info.tel}"></td>
+			</tr>
+			<tr class="other_box">
+				<td width="20%" class="tdleft">物流单号：</td>
+				<td><input type="text" name="number" class="number" value="{$info.number}"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="确定" name="submit" class="btn btn-primary"> &nbsp; <input type="button" value="取消" onclick="javascript:$('#dialog-advance').dialog('close');" class="btn"></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+<script>
+	$(function(){
+		$('.role').click(function(){
+			$(this).addClass('btn-primary');
+			$('.role_box').show();
+			$('.other').removeClass('btn-primary');
+			$('.other_box').hide();
+		})
+		$('.other').click(function(){
+			$(this).addClass('btn-primary');
+			$('.other_box').show();
+			$('.role').removeClass('btn-primary');
+			$('.role_box').hide();
+		})
+		var d = $('.number').val();
+		if(d){
+			$('.other').trigger('click');
+		}else{
+			$('.role').trigger('click');
+		}
+	})
+</script>

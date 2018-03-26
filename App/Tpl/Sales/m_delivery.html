@@ -1,0 +1,65 @@
+<include file="Public:m_header" />
+<div class="container">
+	 <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-12 content">
+
+		 <include file="Public:alert" />
+
+          <div class="well"><img style="height:30px;" src="__PUBLIC__/img/working_platform.png"/> &nbsp;{$Think.session.name}
+        </div>
+
+		<div class="list-group" id="datas">
+		   <a href="javascript:void(0);" class="list-group-item active">
+		      <h4 class="list-group-item-heading">配送单列表</h4>
+		   </a>
+		   <volist name="list" id="vo">
+		    <a href="{:U('sales/m_delivery_status','id=')}{$vo.id}" class="list-group-item clearfix">
+		      <h4 class="list-group-item-heading">
+		         {$vo.sn_code}<small class="pull-right" style="color:red;"><if condition="$vo[delivery_status] == '0'">待送货</if><if condition="$vo[delivery_status] == '1'">送货途中</if><if condition="$vo[delivery_status] == '2'">已送达</if></small>
+		      </h4>
+		      <p class="list-group-item-text">
+		         {$vo.telephone}
+		      </p>
+		      <p class="list-group-item-text" style="margin-top:5px;">
+		         {$vo.customer_name}
+		      </p>
+			  <p class="list-group-item-text" style="margin-top:5px;">
+		         {$vo.address}
+		      </p>
+		   </a>
+		</volist>
+		</div>
+		<if condition="$count gt 10"><button type="button" onclick="getMore()" id="getMore" rel="2" class="btn btn-default btn-lg btn-block">加载更多...</button></if>
+		<hr>
+		</div>
+	</div>
+</div>
+<include file="Public:footer" />
+<script>
+function getMore(){
+	var p = $("#getMore").attr("rel");
+	$.ajax({
+		type:'get',
+		url:"{:U('sales/m_delivery','p=')}"+p,
+		async:false,
+		success:function(data){
+			var temp = '';
+			if(data.data.list != null){
+				$.each(data.data.list, function(k, v){
+					temp += "<a href='{:U('sales/m_delivery_status','id=')}"+v.id+"' class='list-group-item clearfix'>";
+					temp += "<h4 class='list-group-item-heading'>"+v.sn_code+"<small class='pull-right' style='color:red;'>"+v.delivery_status+"</small></h4>";
+					temp += "<p class='list-group-item-text'>"+v.telephone+"</p>";
+					temp += "<p class='list-group-item-text' style='margin-top:5px;'>"+v.customer_name+"</p>";
+					temp += "<p class='list-group-item-text' style='margin-top:5px;'>"+v.address+"</p></a>";
+				});
+				$('#datas').append(temp);
+				$("#getMore").attr("rel",data.data.nextp);
+			}else{
+				$("#getMore").html("没有更多信息");
+			}
+		},
+		dataType:'json'
+	});		
+}
+</script>

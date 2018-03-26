@@ -1,0 +1,180 @@
+<include file="Public:header" />
+	<div class="container">
+		<include file="Public:alert" />
+		<div class="row">
+			<div class="span12">
+				<div class="bulk-actions align-left">
+					<div class="pull-left">
+						<a id="delete" class="btn" style="margin-right: 5px;"><i class="icon-remove"></i>&nbsp;{:L('DELETE')}</a>
+					</div>
+					<ul class="nav pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+							<li class="pull-left">
+								&nbsp;
+								<select style="width:auto" id="field" name="field" onchange="changeCondition()">
+									<option class="word" value="customer_name">客户名称</option>
+									<option class="word" value="product_name">存酒名称</option>
+									<option class="number" value="count">存酒总量</option>
+									<option class="number" value="surplus_count">存酒剩余</option>
+									<option class="date" value="time">创建时间</option>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li id="conditionContent" class="pull-left">
+							<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+								<option selected="selected" value="contains">{:L('CONTAINS')}</option>
+								<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+								<option value="is">{:L('IS')}</option>
+								<option value="isnot">{:L('ISNOT')}</option>
+								<option value="start_with">{:L('START_WITH')}</option>
+								<option value="end_with">{:L('END_WITH')}</option>
+								<option value="is_empty">{:L('IS_EMPTY')}</option>
+								<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+							</select>&nbsp;&nbsp;
+							</li>
+							<li id="searchContent" class="pull-left">
+								<input id="search" class="input-medium search-query" name="search" type="text">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input name="m" value="prestore" type="hidden">
+								<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png">    {:L('SEARCH')}</button>&nbsp;
+							</li>
+						</form>
+					</ul>
+				</div>
+				<!--div class="pull-right">
+					<a class="btn btn-primary" href="{:U('supplier/add')}"><i class="icon-plus"></i>&nbsp; {:L('ADD_SUPPLIER')}</a>
+				</div-->
+			</div>
+			<div class="span12" style="margin-top:10px;">
+				<form id="form1" method="Post">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+								<th><input class="check_all" name="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th>编号</th>
+								<th>客户名称</th>
+								<th>存酒名称</th>
+								<th>存酒总量</th>
+								<th>存酒剩余</th>
+								<th>
+									<a href="{:U('prestore/index','field=time&order=')}{$order}">
+										创建时间
+										<if condition="$Think.get.field eq 'time' && $Think.get.order eq 'desc'"><img src="__PUBLIC__/img/arrow_down.png"></if>
+										<if condition="$Think.get.field eq 'time' && $Think.get.order eq 'asc'"><img src="__PUBLIC__/img/arrow_up.png"></if>
+									</a>
+								</th>
+								<th>{:L('OPERATING')}</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="8">
+									{$page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="list" id="vo">
+								<tr>
+									<td>
+										<input class="check_list" name="ids[]" value="{$vo.id}" type="checkbox">
+									</td>
+									<td>{$vo.id}</td>
+									<td><a target="_blank" href="{:U('customer/view','id=')}{$vo.customer_id}">{$vo.customer_name}</a></td>
+									<td><a target="_blank" href="{:U('product/view','id=')}{$vo.product_id}">{$vo.product_name}</a></td>
+									<td>{$vo.count}</td>
+									<td>{$vo.surplus_count}</a></td>
+									<td>{$vo[time] | date="Y-m-d",###}</td>
+									<td>
+										<a class="view_prestore" rel="{$vo.id}" href="javascript:void(0);">{:L('VIEW')}</a>&nbsp;&nbsp;
+										<a class="add_prestore" rel="{$vo.id}" href="javascript:void(0);">取酒</a>&nbsp;&nbsp;
+										<a target="_blank" href="{:U('prestore/delete','id=')}{$vo.id}">{:L('DELETE')}</a>&nbsp;&nbsp;
+										<a rel="{$vo.id}" class="qrcode" href="javascript:void(0);">查看二维码</a>
+									</td>
+								</tr>
+							</volist>
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<div class="hide" id="dialog-add-prestore" title="添加取酒记录">loading...</div>
+<div class="hide" id="dialog-view-prestore" title="添加取酒记录">loading...</div>
+<div class="hide" id="dialog-view-qrcode" title="查看二维码">loading...</div>
+<script type="text/javascript">
+	width=800;
+	$(document).ready(function(){
+		$('#search').val('');
+		$("#field option[value='']").prop("selected", true);
+		$("#condition option[value='']").prop("selected", true);
+	});
+
+	$("#dialog-view-qrcode").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 180,
+		maxHeight: 300,
+		position: ["center",100]
+	});
+	$('.qrcode').click(function(){
+		var prestore_id = $(this).attr('rel');
+		$('#dialog-view-qrcode').dialog('open');
+		$('#dialog-view-qrcode').load('/index.php?m=prestore&a=qrcode&id='+prestore_id);
+	});
+
+	$("#dialog-view-prestore").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+	$('.view_prestore').click(function(){
+		var prestore_id = $(this).attr('rel');
+		$('#dialog-view-prestore').dialog('open');
+		$('#dialog-view-prestore').load('/index.php?m=prestore&a=view&id='+prestore_id);
+	});
+	
+	$("#dialog-add-prestore").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+	$('.add_prestore').click(function(){
+		var prestore_id = $(this).attr('rel');
+		$('#dialog-add-prestore').dialog('open');
+		$('#dialog-add-prestore').load('/index.php?m=prestore&a=add&id='+prestore_id);
+	});
+	
+	$(".role_info").click(function(){
+		$role_id = $(this).attr('rel');
+		$('#dialog-role-info').dialog('open');
+		$('#dialog-role-info').load('/index.php?m=user&a=dialoginfo&id='+$role_id);
+	});
+	
+	$("#dialog-role-info").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+
+	$("#check_all").click(function(){
+		$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+	});
+	
+	$('#delete').click(function(){
+		if(confirm("确定要删除么？")){
+			$("#form1").attr('action', '/index.php?m=prestore&a=delete');
+			$("#form1").submit();
+		}else{
+			return false;
+		}
+	});
+</script>
+<include file="Public:footer" />

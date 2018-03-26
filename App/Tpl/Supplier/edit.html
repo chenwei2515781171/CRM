@@ -1,0 +1,28 @@
+<form method="post" action="{:U('supplier/edit')}" id="edit_supplier_form" class="form-horizontal">	
+	<input type="hidden" value="{$assign.supplier_info.id}" name="id">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th colspan="4">{:L('BASE_INFO')}</th>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('SUPPLIER')}</td>
+				<td colspan="3"><input type="text" value="{$assign.supplier_info.name}" id="name" name="base[name]" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('CATEGORY')}</td>
+				<td colspan="3">
+					<select id="category_id" name="base[category_id]">
+						<volist name="assign.category_list" id="vo">
+							<option <if condition="$vo['id'] eq $assign['supplier_info']['category_id']">selected="selected"</if>value="{$vo.id}">{$vo.name}</option>
+						</volist>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('REMARK')}</td>
+				<td><textarea style="min-height:100px;" class="span6" name="base[description]">{$assign.supplier_info.description}</textarea></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

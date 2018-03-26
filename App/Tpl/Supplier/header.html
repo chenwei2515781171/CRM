@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs">
+	<li <if condition="$assign[active] == 'purchase'">class="active"</if>>
+	<a href="{:U('purchase/index')}"><img src="__PUBLIC__/img/renwu.png">&nbsp;{:L('PURCHASE_ORDER')}</a>
+	</li>
+	<li <if condition="$assign[active] == 'index'">class="active"</if>>
+		<a href="{:U('supplier/index')}"><img src="__PUBLIC__/img/tongji.png"> &nbsp;{:L('SUPPLIER')}</a>
+	</li>
+	<li <if condition="$assign[active] == 'category'">class="active"</if>>
+		<a href="{:U('supplier/category')}"><img src="__PUBLIC__/img/tongji.png"> &nbsp;{:L('SUPPLIER_CATEGORY')}</a>
+	</li>
+</ul>

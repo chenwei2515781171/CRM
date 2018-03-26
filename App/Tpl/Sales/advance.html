@@ -1,0 +1,23 @@
+<form method="post" action="{:U('sales/advance')}" class="form-horizontal">	
+	<table class="table">
+		<input type="hidden" value="{$Think.get.id}" name="id">
+		<tbody>
+			<tr>
+				<td width="20%" class="tdleft">收款进度：</td>
+				<td>
+					<select name="receipt_progress">
+						<option value="0" <if condition="$data eq 0">selected="selected"</if>>未收款</option>
+						<option value="4" <if condition="$data eq 4">selected="selected"</if>>货到付款</option>
+						<option value="1" <if condition="$data eq 1">selected="selected"</if>>已收定金</option>
+						<option value="2" <if condition="$data eq 2">selected="selected"</if>>已收第一批款</option>
+						<option value="3" <if condition="$data eq 3">selected="selected"</if>>已收全款</option>		
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="确定" name="submit" class="btn btn-primary"> &nbsp; <input type="button" value="取消" onclick="javascript:$('#dialog-advance').dialog('close');" class="btn"></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

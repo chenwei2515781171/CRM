@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs">
+	<li <if condition="$assign[active] == 'receivables'">class="active"</if>><a  href="{:U('finance/index','t=receivables')}"><img src="__PUBLIC__/img/yingshoukuan.png"/>&nbsp; {:L('RECEIVABLES')}</a></li>
+	<li <if condition="$assign[active] == 'payables'">class="active"</if>><a href="{:U('finance/index','t=payables')}"><img src="__PUBLIC__/img/yingfukuan.png"/> &nbsp; {:L('PAYABLES')}</a></li>
+	<li <if condition="$assign[active] == 'present'">class="active"</if>><a href="{:U('finance/present')}"><img src="__PUBLIC__/img/shoukuandan.png"/> &nbsp; 赠品</a></li>
+	<!--li <if condition="$assign[active] == 'receivingorder'">class="active"</if>><a href="{:U('finance/index','t=receivingorder')}"><img src="__PUBLIC__/img/shoukuandan.png"/> &nbsp; {:L('RECEIVINGORDER')}</a></li>
+	<li <if condition="$assign[active] == 'paymentorder'">class="active"</if>><a href="{:U('finance/index','t=paymentorder')}"><img src="__PUBLIC__/img/fukuandan.png"/> &nbsp; {:L('PAYMENTORDER')}</a></li>
+	<li <if condition="$assign[active] == 'analytics'">class="active"</if>><a href="{:U('finance/analytics')}"><img src="__PUBLIC__/img/tongji.png"/> &nbsp; {:L('STATISTICS')}</a></li-->
+</ul>

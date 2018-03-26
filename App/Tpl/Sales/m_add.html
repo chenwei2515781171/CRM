@@ -1,0 +1,352 @@
+<include file="Public:m_header" />
+<link type="text/css" href="__PUBLIC__/css/jquery-ui-1.10.0.custom.css?t=20140830" rel="stylesheet" />
+<script src="__PUBLIC__/js/jquery-ui-1.10.0.custom.min.js?t=20140830" type="text/javascript"></script>
+<style>
+  .w_list{width:40px;}
+</style>
+<div class="container">
+	 <div class="row row-offcanvas row-offcanvas-left">
+		<include file="Public:leftmenu" />
+        <div class="col-xs-12">
+		  <form role="form" action="{:U('sales/m_add')}" method="post" class="form-horizontal">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h3 class="panel-title text-center">基本信息</h3>
+               </div>
+               <div class="panel-body">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">客户名称</label>
+                      <div class="col-sm-9">
+                         <input type="text" id="customer_name" class="form-control" name="base[customer_name]">
+                         <input name="base[customer_id]" id="customer_id" value="" type="hidden">
+                      </div>
+                   </div>
+                   <div class="form-group">
+                      <label class="col-sm-2 control-label">主题</label>
+                      <div class="col-sm-9">
+                          <select name="base[subject]" class="form-control">
+                            <option value="{:L('SUBJECT_1')}">{:L('SUBJECT_1')}</option>
+                            <option value="{:L('SUBJECT_2')}">{:L('SUBJECT_2')}</option>
+                            <option value="{:L('SUBJECT_3')}">{:L('SUBJECT_3')}</option>
+                            <option value="{:L('SUBJECT_4')}">{:L('SUBJECT_4')}</option>
+                            <option value="{:L('SUBJECT_5')}">{:L('SUBJECT_5')}</option>
+                            <option value="{:L('SUBJECT_6')}">{:L('SUBJECT_6')}</option>
+                          </select>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                      <label class="col-sm-2 control-label">销售分类</label>
+                      <div class="col-sm-9">
+                          <select name="base[category]" class="form-control">
+                            <option value="0">现取</option>
+                            <option value="1">存酒</option>
+                            </select>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                      <label class="col-sm-2 control-label">收货地址</label>
+                      <div class="col-sm-9">
+                        <input class="form-control text-center" id="address" name="base[address]" placeholder="填写客户地址" type="text">
+                        </div>
+                   </div>
+                   <div class="form-group">
+                      <label class="col-sm-2 control-label">其他费用</label>
+                      <div class="col-sm-9">
+                        <input class="form-control text-center" name="base[other_expenses]" placeholder="例如运费..." type="text">
+                        </div>
+                   </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h3 class="panel-title text-center">提成人员信息</h3>
+               </div>
+                  <table class="table table-bordered" id="no-input-border" border="0" cellpadding="0" cellspacing="1">
+                    <tbody>
+                      <tr>
+                        <td>团队：</td>
+                        <td colspan="3"><input type="text" name="base[team_percent]" class="input-mini form-control"></td>
+                      </tr>
+                      <tr>
+                        <td width="25%">&nbsp;</td>
+                        <td>提成人员</td>
+                        <td>提成比例(%)</td>
+                        <td>组长</td>
+                      </tr>
+                      <tr id="tc_row_1">
+                        <td>
+                          &nbsp;
+                          <a href="javascript:void(0);" class="add_one_tc"><i class="icon-plus"></i></a>&nbsp;&nbsp;
+                          <a href="javascript:void(0);" class="reduce_one_tc"><i class="icon-minus"></i></a>
+                        </td>
+                        <td>
+                          <input name="sales[tc][1][user_id]" id="tc_id_1" class="tc_id" type="hidden" value="{$Think.session.role_id}">
+                          <input id="tc_name_1" onclick="loadDialog_tc(1)" type="text" class="input-mini form-control" value="{$Think.session.name}">
+                        </td>
+                        <td><input name="sales[tc][1][owner_percent]" id="tc_bl_1" class="input-mini form-control" type="text"></td>         
+                        <td><input name="sales[is_lead]" type="radio" value="{$Think.session.role_id}"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h3 class="panel-title text-center">商品信息<input id="add_product" type="button" class="pull-right btn btn-primary btn-xs" value="添加商品"></h3>
+               </div>
+                <table class="table table-bordered" id="no-input-border" border="0" cellpadding="0" cellspacing="1">
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>{:L('COMMODITY')}</td>
+                      <td>{:L('COUNT')}</td>
+                      <td>单价</td>
+                      <td>折扣(%)</td>
+                      <td>仓库</td>
+                      <td>包装</td>
+                    </tr>
+                    <tbody id="add_products"></tbody>
+                  </tbody>
+                </table>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h3 class="panel-title text-center">赠品信息<input id="zp_add_product" type="button" class="pull-right btn btn-primary btn-xs" value="添加赠品"></h3>
+               </div>
+                <table class="table table-bordered" id="no-input-border" border="0" cellpadding="0" cellspacing="1">
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>{:L('COMMODITY')}</td>
+                      <td>{:L('COUNT')}</td>
+                      <td>单价</td>
+                      <td>仓库</td>
+                    </tr>
+                    <tbody id="zp_add_products"></tbody>
+                  </tbody>
+                </table>
+            </div>
+            <div class="form-group col-sm-12">
+                <input name="submit" class="btn btn-primary" type="submit" value="{:L('SAVE')}"/> &nbsp;
+                <input name="submit" class="btn" type="button" onclick="javascript:history.go(-1)" value="{:L('RETURN')}"/>
+            </div>
+        </form>
+		</div>
+	</div>
+</div>
+<div id="dialog-owner-list" title="人员列表"></div>
+<div id="dialog-customer-list" title="{:L('CUSTOMERS_LIST')}"></div>
+<div id="dialog-product-list" title="{:L('COMMODITY_LIST')}"></div>
+<div id="zp-dialog-product-list" title="{:L('COMMODITY_LIST')}"></div>
+<include file="Public:footer" />
+
+<script type="text/javascript">
+var height_screen = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+<!-- 提成模块开始 -->
+var tc_total_row_id = 1;
+var tc_now_rows = 1;
+//增加一条信息
+$(document).on('click','.add_one_tc',function(){
+  tc_total_row_id ++;
+  tc_now_rows ++;
+  var row_html = '<tr id="tc_row_'+tc_total_row_id+'">';
+  row_html +='<td>&nbsp;&nbsp;';
+  row_html +='<a href="javascript:void(0);" class="add_one_tc"><i class="icon-plus"></i></a>&nbsp;&nbsp;&nbsp;';
+  row_html +='<a href="javascript:void(0);" class="reduce_one_tc"><i class="icon-minus"></i></a>';
+  row_html +='</td>';
+  row_html +='<td><input type="hidden" name="sales[tc]['+tc_total_row_id+'][user_id]" id="tc_id_'+tc_total_row_id+'" class="tc_id"/>';
+  row_html +='<input type="text" id="tc_name_'+tc_total_row_id+'" class="input-mini form-control" onclick="loadDialog_tc('+tc_total_row_id+')"/></td>';
+  row_html +='<td><input type="text" name="sales[tc]['+tc_total_row_id+'][owner_percent]" id="tc_bl_'+tc_total_row_id+'" class="input-mini form-control"/></td>'; 
+  row_html +='<td><input name="sales[is_lead]" id="tc_dz_'+tc_total_row_id+'" type="radio" value=""></td>';
+  row_html +='</tr>';
+  $(this).parent().parent().after(row_html);
+});
+//减少一条信息
+$(document).on('click','.reduce_one_tc',function(){
+  var tc_row_id = $(this).parent().parent().attr('id');
+  if(tc_now_rows <= 1){
+    //至少保留一条
+    alert('至少保留一条！');
+    return false;
+  }else{
+    //如果行内存在商品，弹出操作提示
+    tc_row_val = tc_row_id.substr(7);
+    if($('#tc_id_'+tc_row_val).val() == ''){
+      $('#'+tc_row_id).remove();
+      bl(tc_total_row_id);
+    }else{
+      if(confirm('该行存在人员，确定要移除么？')){
+        $('#'+tc_row_id).remove();
+        bl(tc_total_row_id);
+      }else{
+        return false;
+      }
+    }
+  }
+  tc_now_rows --;
+});
+
+<!-- 人员浮动层-->
+function loadDialog_tc(param){
+  $("#dialog-owner-list").dialog({
+    autoOpen: false,
+    modal: true,
+    width: width=$('.container').width() * 0.9,
+    maxHeight: height_screen * 0.8,
+    position: ["center",60],
+    buttons:{
+      '确认':function(){
+        var item = $('input:radio[name="owner"]:checked').val();
+        var name = $('input:radio[name="owner"]:checked').parent().next().html();
+        $('#tc_name_'+param).val(name);
+        $('#tc_id_'+param).val(item);
+        $('#tc_dz_'+param).val(item);
+        $(this).dialog('close');
+      },
+      '取消':function(){
+        $(this).dialog('close');
+      }
+    }
+  });
+  $('#dialog-owner-list').dialog('open');
+  $('#dialog-owner-list').load('{:U("user/listDialog","by=all")}');
+}
+<!-- 人员浮动层 END-->
+
+//客户列表
+$('#customer_name').click(function(){
+	$('#dialog-customer-list').dialog('open');
+	$('#dialog-customer-list').load('{:U("customer/listDialog")}');
+});
+$("#dialog-customer-list").dialog({
+	autoOpen: false,
+	modal: true,
+	width: width=$('.container').width() * 0.9,
+	maxHeight: height_screen * 0.8,
+	position: ["center",60],
+	buttons:{
+		'确认':function(){
+			var customer_id = $('input:radio[name="customer"]:checked').val();
+			var customer_name = $('input:radio[name="customer"]:checked').parent().next().html();
+      var address = $('input:radio[name="customer"]:checked').next().next().val();
+			$('#customer_id').val(customer_id);
+			$('#customer_name').val(customer_name);
+      $('#address').val(address);
+			$(this).dialog('close');
+		},
+		'取消':function(){
+			$(this).dialog('close');
+		}
+	}
+});
+
+<!-- 增加和减少ROW -->
+var total_row_id = 1;
+var now_rows = 0;
+//减少一条信息
+$(document).on('click','.reduce_one',function(){
+  var row_id = $(this).parent().parent().attr('id');
+  //如果行内存在商品，弹出操作提示
+  row_val = row_id.substr(4);
+  if($('#tc_id_'+row_val).val() == ''){
+    $('#'+row_id).remove();
+    calculate(total_row_id);
+  }else{
+    if(confirm('该行存在商品，确定要移除么？')){
+      $('#'+row_id).remove();
+      calculate(total_row_id);
+    }else{
+      return false;
+    }
+  }
+  now_rows --;
+});
+<!-- 增加和减少ROW END-->
+
+$('#add_product').click(function(){
+  $('#dialog-product-list').dialog('open');
+  $('#dialog-product-list').load('{:U('product/m_mutildialog')}');
+});
+<!-- 商品浮动层-->
+//选择商品
+$("#dialog-product-list").dialog({
+  autoOpen: false,
+  modal: true,
+  width: width=$('.container').width() * 0.9,
+  maxHeight: height_screen * 0.8,
+  position: ["center",60],
+  buttons:{
+    "确定":function(){
+      $("#dialog-product-list .se_product").each(function(){
+        now_rows += 1;
+        var product_name = $(this).text();
+        var product_id = $(this).attr('rel');
+        var suggested_price = $(this).children("input:first-child").val();
+        if(product_id != null){
+          $('#add_products').append('<tr id="row_'+now_rows+'"><td style="text-align:center;"><a href="javascript:void(0);" class="reduce_one"><i class="icon-minus"></i></a></td><td><input type="hidden" name="sales[product]['+now_rows+'][product_id]" id="product_id_'+now_rows+'" class="product_id" value="'+product_id+'" /><input class="input-mini form-control" type="text" id="product_name_'+now_rows+'" readonly="readonly" value="'+product_name+'"/></td><td><input class="input-mini form-control amount" type="text" name="sales[product]['+now_rows+'][amount]" id="product_amount_'+now_rows+'" onkeyup="calculate('+now_rows+')" value="1"/></td><td><input class="input-mini form-control" type="text" name="sales[product]['+now_rows+'][unit_price]" id="product_unit_price_'+now_rows+'" value="'+suggested_price+'" /></td><td><input class="input-mini form-control" type="text" name="sales[product]['+now_rows+'][discount_rate]" id="product_discount_rate_'+now_rows+'" value="" /></td><td><select class="w_list" name="sales[product]['+now_rows+'][warehouse_id]" ><volist name="warehouse_list" id="vo"><option value="{$vo.id}">{$vo.name}</option></volist></select></td><td><input type="checkbox" name="sales[product]['+now_rows+'][pack]" id="product_pack_'+now_rows+'" value="1"/></td></tr>');
+        }
+      });
+      $(this).dialog('close');
+    },
+    "取消":function(){
+      $(this).dialog('close');
+    }
+  }
+});
+<!-- 商品浮动层 END-->
+
+
+<!-- 赠品 -->
+var zp_total_row_id = 1;
+var zp_now_rows = 0;
+//减少一条信息
+$(document).on('click','.reduce_one',function(){
+  var row_id = $(this).parent().parent().attr('id');
+  //如果行内存在商品，弹出操作提示
+  row_val = row_id.substr(4);
+  if($('#tc_id_'+row_val).val() == ''){
+    $('#'+row_id).remove();
+    calculate(zp_total_row_id);
+  }else{
+    if(confirm('该行存在商品，确定要移除么？')){
+      $('#'+row_id).remove();
+      calculate(zp_total_row_id);
+    }else{
+      return false;
+    }
+  }
+  zp_now_rows --;
+});
+
+$('#zp_add_product').click(function(){
+  $('#zp-dialog-product-list').dialog('open');
+  $('#zp-dialog-product-list').load('{:U('product/m_mutildialog')}');
+});
+
+$("#zp-dialog-product-list").dialog({
+  autoOpen: false,
+  modal: true,
+  width: width=$('.container').width() * 0.9,
+  maxHeight: height_screen * 0.8,
+  position: ["center",60],
+  buttons:{
+    "确定":function(){
+      $("#zp-dialog-product-list .se_product").each(function(){
+        zp_now_rows += 1;
+        var product_name = $(this).text();
+        var product_id = $(this).attr('rel');
+        var suggested_price = $(this).children("input:first-child").val();
+        if(product_id != null){
+          $('#zp_add_products').append('<tr id="row_'+zp_now_rows+'"><td style="text-align:center;"><a href="javascript:void(0);" class="reduce_one"><i class="icon-minus"></i></a></td><td><input type="hidden" name="sales[present]['+zp_now_rows+'][product_id]" id="product_id_'+zp_now_rows+'" class="product_id" value="'+product_id+'" /><input class="input-mini form-control" type="text" id="product_name_'+zp_now_rows+'" readonly="readonly" value="'+product_name+'"/></td><td><input class="input-mini form-control amount" type="text" name="sales[present]['+zp_now_rows+'][amount]" id="product_amount_'+zp_now_rows+'" onkeyup="calculate('+zp_now_rows+')" value="1"/></td><td><input class="input-mini form-control" type="text" name="sales[present]['+zp_now_rows+'][price]" id="product_price_'+zp_now_rows+'" onkeyup="calculate('+zp_now_rows+')" value="'+suggested_price+'" /></td><td><select class="w_list" name="sales[present]['+now_rows+'][warehouse_id]" ><volist name="warehouse_list" id="vo"><option value="{$vo.id}">{$vo.name}</option></volist></select></td></tr>');
+        }
+      });
+      $(this).dialog('close');
+    },
+    "取消":function(){
+      $(this).dialog('close');
+    }
+  }
+});
+<!-- 赠品 END-->
+
+</script>

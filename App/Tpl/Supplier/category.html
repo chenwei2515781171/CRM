@@ -1,0 +1,114 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Supplier:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+			<div class="nav span12">
+				<div class="pull-left">
+					<a class="btn" id="delete"><i class="icon-remove"></i>{:L('DELETE')}</a>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="javascript:void(0);" id="add_category"><i class="icon-plus"></i>&nbsp; {:L('ADD_CATEGORY')}</a>&nbsp;&nbsp;
+				</div>
+			</div>
+			<div class="span12">
+				<form id="form" method="Post" action="{:U('Supplier/deletecategory')}">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+							   <th style="width: 156px;"><input class="check_all" name="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+							   <th style="width: 301px;">{:L('NAME')}</th>
+							   <th style="width: 301px;">{:L('DESCRIPTION')}</th>
+							   <th style="width: 209px;">{:L('CREATE_TIME')}</th>
+							   <th style="width: 370px;">{:L('OPERATE')}</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="4">
+									{$assign.page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="assign.category_list" id="vo">
+								<tr>
+									<td style="width: 87px;">
+										<input class="check_list" name="ids[]" value="{$vo.id}" type="checkbox">
+									</td>
+									<td style="width: 209px;"><a href="javascript:void(0);" class="edit_category" rel="{$vo.id}">{$vo.name}</a></td>
+									<td style="width: 621px;">{$vo.description}</td>
+									<td style="width: 209px;">{$vo[create_time] | date='Y-m-d',###}</td>
+									<td style="width: 211px;">
+										<a href="javascript:void(0);" class="edit_category" rel="{$vo.id}">{:L('EDIT')}</a>&nbsp;&nbsp;
+										<a href="{:U('supplier/deletecategory','id=')}{$vo.id}" class="del_confirm">{:L('DELETE')}</a>
+									</td>
+								</tr>
+							</volist>
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="hide" id="dialog-add-category" title="{:L('ADD_SUPPLIER_CATEGORY')}">loading...</div>
+<div class="hide" id="dialog-edit-category" title="{:L('EDIT_SUPPLIER_CATEGORY')}">loading...</div>
+<script type="text/javascript">
+	$("#dialog-add-category").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			"确定":function(){
+				$('#add_category_form').submit();
+			},
+			"取消":function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+	
+	$("#dialog-edit-category").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			"确定":function(){
+				$('#edit_category_form').submit();
+			},
+			"取消":function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+
+	$(function(){
+		$('#add_category').click(function(){
+			$('#dialog-add-category').dialog('open');
+			$('#dialog-add-category').load('{:U('supplier/addcategory')}');
+		});
+
+		$('.edit_category').click(function(){
+			var category_id = $(this).attr('rel');
+			$('#dialog-edit-category').dialog('open');
+			$('#dialog-edit-category').load('{:U('supplier/editcategory','id=')}'+category_id);
+		});
+
+		$("#check_all").click(function(){
+			$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+		});
+
+		$('#delete').click(function(){
+			if(confirm("{:L('ARE_YOU_SRUE_DELETE')}")){
+				$("#form").submit();
+			}
+		});
+	})
+</script>
+<include file="Public:footer" />

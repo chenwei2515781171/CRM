@@ -1,0 +1,41 @@
+<form method="post" action="{:U('prestore/add')}" id="add_prestore_form" class="form-horizontal">
+	<input type="hidden" name="pre_id" value="{$Think.get.id}">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th colspan="2">取酒记录</th>
+			</tr>
+			<!--tr>
+				<td class="tdleft span2">次数</td>
+				<td><input type="text" name="num" class="span3"></td>
+			</tr-->
+			<tr>
+				<td class="tdleft span2">日期</td>
+				<td><input type="text" name="time" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'%y-%M-%d', })" value="<?php echo date('Y-m-d',time()); ?>" class="span3 Wdate"></td>
+			</tr>
+			<tr>
+				<td class="tdleft span2">取酒数量</td>
+				<td><input type="text" name="take_num" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft span2">客户签字</td>
+				<td><input type="text" name="customer_sign" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft span2">仓管签字</td>
+				<td><input type="text" name="manage_sign" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">备注</td>
+				<td><textarea style="min-height:80px" class="span4" name="description"></textarea></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="3">
+					<input type="submit" value="{:L('SAVE')}" name="submit" class="btn btn-primary"> &nbsp;
+					<input type="button" value="{:L('CANCEL')}" onclick="javascript:$('#dialog-edit-supplier').dialog('close');" class="btn">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>

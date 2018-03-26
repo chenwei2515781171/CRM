@@ -1,0 +1,40 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header" style="border:none; font-size:14px;">
+		<include file="Sales:header" />
+	</div>
+	<include file="Public:alert" />
+	<div class="row">
+		<div class="span12">
+			<form id="form1" action="" method="post">
+			<table class="table table-hover table-striped table_thead_fixed"> 
+				<notempty name="assign.list">
+				<thead>
+					<tr>
+						<th><input class="check_all" id="check_all" type="checkbox" /></th>
+						<th>销售编号</th>
+						<th>奖金池金额</th>
+						<th>创建时间</th>
+					</tr>
+				</thead> 
+				<tbody>
+					<volist name="assign.list" id="vo">
+						<tr>
+							<td>
+								<input type="checkbox" class="check_list" name="payables_id[]" value="{$vo.payables_id}"/>
+							</td>
+							<td><a href="{:U('sales/view','id='.$vo['sales_id'])}">{$vo.sn_code}</a></td>
+							<td>{$vo.bonus}</td>
+							<td>{$vo['time']|date="Y-m-d",###}</td>
+						</tr>
+					</volist>
+				</tbody>
+				<else />
+					<tr><td>{:L('EMPTY_TPL_DATA')}</td></tr>
+				</notempty>
+			</table>
+			</form>
+		</div> <!-- End #tab1 -->	
+	</div> <!-- End #main-content -->
+</div>
+<include file="Public:footer" />	

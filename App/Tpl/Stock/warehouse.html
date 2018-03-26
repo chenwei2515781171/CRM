@@ -1,0 +1,117 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Stock:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+			<div class="nav span12">
+				<div class="pull-left">
+					<a class="btn" id="delete"><i class="icon-remove"></i>{:L('DELETE')}</a>
+				</div>
+				<div class="pull-right">
+					<a class="btn btn-primary" href="javascript:void(0);" id="add_warehouse"><i class="icon-plus"></i>&nbsp; {:L('ADD')}{:L('WAREHOUSE')}</a>&nbsp;&nbsp;
+				</div>
+			</div>
+			<div class="span12">
+				<form id="form" method="Post" action="{:U('stock/deletewarehouse')}">
+					<table class="table table-hover table-striped table_thead_fixed">
+						<thead>
+							<tr>
+								<th style="width: 87px;"><input class="check_all" name="check_all" id="check_all" type="checkbox"> &nbsp;</th>
+								<th style="width: 209px;">{:L('NAME')}</th>
+								<th style="width: 621px;">{:L('DESCRIPTION')}</th>
+								<th style="width: 209px;">{:L('CREATE_TIME')}</th>
+								<th style="width: 211px;">{:L('OPERATE')}</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td id="td_colspan" colspan="4">
+									{$assign.page}
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<volist name="assign.warehouse_list" id="vo">
+								<tr>
+									<td style="width: 87px;">
+										<input class="check_list" name="ids[]" value="{$vo.id}" type="checkbox">
+									</td>
+									<td style="width: 209px;"><a href="javascript:void(0);" class="edit_warehouse" rel="{$vo.id}">{$vo.name}</a></td>
+									<td style="width: 621px;">{$vo.description}</td>
+									<td style="width: 209px;">{$vo[create_time] | date='Y-m-d',###}</td>
+									<td style="width: 211px;">
+										<a href="javascript:void(0);" class="edit_warehouse" rel="{$vo.id}">{:L('EDIT')}</a>&nbsp;&nbsp;
+										<a href="{:U('stock/deletewarehouse','id=')}{$vo.id}" class="del_confirm">{:L('DELETE')}</a>
+									</td>
+								</tr>
+							</volist>				
+						</tbody>					
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="hide" id="dialog-add-warehouse" title="{:L('ADD')}{:L('WAREHOUSE')}">loading...</div>
+<div class="hide" id="dialog-edit-warehouse" title="{:L('EDIT')}{:L('WAREHOUSE')}">loading...</div>
+<script type="text/javascript">
+	//添加仓库
+	$("#dialog-add-warehouse").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			'确定':function(){
+				$('#add_warehouse_form').submit();
+			},
+			'取消':function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+	
+	//编辑仓库
+	$("#dialog-edit-warehouse").dialog({
+		autoOpen: false,
+		modal: true,
+		width: 800,
+		maxHeight: 400,
+		position: ["center",100],
+		buttons:{
+			'确定':function(){
+				$('#edit_warehouse_form').submit();
+			},
+			'取消':function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+
+	$(function(){
+		$('#add_warehouse').click(function(){
+			$('#dialog-add-warehouse').dialog('open');
+			$('#dialog-add-warehouse').load('{:U('stock/addwarehouse')}');
+		});
+
+		$('.edit_warehouse').click(function(){
+			var warehouse_id = $(this).attr('rel');
+			$('#dialog-edit-warehouse').dialog('open');
+			$('#dialog-edit-warehouse').load('{:U('stock/editwarehouse','id=')}'+warehouse_id);
+		});
+		
+		//全选
+		$("#check_all").click(function(){
+			$("input[class='check_list']").prop('checked', $(this).prop("checked"));
+		});
+
+		$('#delete').click(function(){
+			if(confirm("{:L('ARE_YOU_SRUE_DELETE')}")){
+				$("#form").submit();
+			}
+		});
+	})
+</script>
+<include file="Public:footer" />

@@ -1,0 +1,88 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header" style="border:none; font-size:14px;">
+		<include file="Finance:header" />
+	</div>
+	<include file="Public:alert" />
+	<div class="row">
+		<div class="span12">
+			<!--div class="pull-left">
+				<if condition="$Think.session.admin eq 1 or $Think.get.by neq 'deleted'"><a id="delete"  class="btn" style="margin-right: 8px;"><i class="icon-remove"></i> {:L('DELETE')}</a></if>
+			</div-->
+			<div class="pull-left">
+				<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+					<ul class="nav pull-left">
+						<li class="pull-left">
+							<select style="width:auto" name="field" id="field" onchange="changeCondition()">
+								<option class="word" value="name">销售单名称</option>
+								<option class="number" value="price">赠品总价</option>
+							</select>&nbsp;&nbsp;
+						</li>
+						<li id="conditionContent" class="pull-left">
+							<select id="condition" style="width:auto" name="condition" onchange="changeSearch()">
+								<option value="contains">{:L('CONTAINS')}</option>
+								<option value="not_contain">{:L('NOT_CONTAIN')}</option>
+								<option value="is">{:L('IS')}</option>
+								<option value="isnot">{:L('ISNOT')}</option>				
+								<option value="start_with">{:L('START_WITH')}</option>
+								<option value="end_with">{:L('END_WITH')}</option>
+								<option value="is_empty">{:L('IS_EMPTY')}</option>
+								<option value="is_not_empty">{:L('IS_NOT_EMPTY')}</option>
+							</select>&nbsp;&nbsp;
+						</li>
+						<li id="searchContent" class="pull-left">
+							<input id="search" type="text" class="input-medium search-query" name="search"/>&nbsp;&nbsp;
+						</li>
+						<li class="pull-left">
+						<input type="hidden" name="m" value="finance"/>
+						<input type="hidden" name="a" value="present"/>
+						<button type="submit" class="btn"> <img src="__PUBLIC__/img/search.png"/>  {:L('SEARCH')}</button></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div class="span12">
+			<form id="form1" action="" method="post">
+			<table class="table table-hover table-striped table_thead_fixed"> 
+				<notempty name="assign.list">
+				<thead>
+					<tr>
+						<th><input class="check_all" id="check_all" type="checkbox" /></th>
+						<th>销售单名称</th>
+						<th>制单人</th>
+						<th>赠品金额</th>
+						<th>创建时间</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr style="background: #029BE2;color: #fff;font-size: 12px;">
+						<td colspan="5">当前页金额总计：{$assign.money}（元）金额总计：{$assign.sum_money}（元）</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							{$assign.page}
+						</td>
+					</tr>
+				</tfoot>  
+				<tbody>
+					<volist name="assign.list" id="vo">
+						<tr>
+							<td>
+								<input type="checkbox" class="check_list" name="payables_id[]" value="{$vo.payables_id}"/>
+							</td>
+							<td><a href="{:U('sales/view','id='.$vo['sales_id'])}">{$vo.name}</a></td>
+							<td>{$vo.user_name}</td>
+							<td>{$vo.price}</td>
+							<td>{$vo['create_time']|date="Y-m-d",###}</td>
+						</tr>
+					</volist>
+				</tbody>
+				<else />
+					<tr><td>{:L('EMPTY_TPL_DATA')}</td></tr>
+				</notempty>
+			</table>
+			</form>
+		</div> <!-- End #tab1 -->	
+	</div> <!-- End #main-content -->
+</div>
+<include file="Public:footer" />	

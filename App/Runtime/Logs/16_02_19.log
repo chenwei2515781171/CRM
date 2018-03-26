@@ -1,0 +1,181 @@
+[ 2016-02-19T09:12:40+08:00 ] 180.136.206.226 /index.php?m=stock&a=out&product=&warehouse=&start_time=&end_time=&p=2
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-02-19T10:23:49+08:00 ] 180.136.206.226 /index.php?m=sales&a=view&id=21
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+
+[ 2016-02-19T10:40:06+08:00 ] 180.136.206.226 /index.php?m=sales&a=view&id=14
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+
+[ 2016-02-19T14:31:06+08:00 ] 180.136.206.226 /index.php?m=product&a=view&id=141
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_log` WHERE ( log_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_file` WHERE ( file_id in (%s) ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) and is_deleted=0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_task` WHERE ( task_id in (%s) and is_deleted=0 ) 
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s) )' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_event` WHERE ( event_id in (%s) ) 
+
+[ 2016-02-19T14:33:18+08:00 ] 180.136.206.226 /index.php?m=stock&a=in
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( user_id= ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-02-19T14:35:39+08:00 ] 180.136.206.226 /index.php?m=knowledge
+ERR: Table 'lx_crm_hytc.crm_user_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user_role`
+
+[ 2016-02-19T14:35:53+08:00 ] 180.136.206.226 /index.php?m=announcement
+ERR: Table 'lx_crm_hytc.crm_user_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user_role`
+
+[ 2016-02-19T14:59:20+08:00 ] 180.136.206.226 /index.php?m=announcement&a=view&id=1
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( announcement_id=1 )' at line 1
+ [ SQL语句 ] : UPDATE `crm_announcement` SET  WHERE ( announcement_id=1 )
+ERR: Table 'lx_crm_hytc.crm_user_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `crm_user_role`
+ERR: Table 'lx_crm_hytc.crm_user_role' doesn't exist
+ [ SQL语句 ] : SELECT `name` FROM `crm_user_role` WHERE ( role_id = 1 ) LIMIT 1  
+
+[ 2016-02-19T15:28:16+08:00 ] 180.136.206.226 /index.php?customer=35&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null)  ) AND ( `create_time` <= 1455866896 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null)  ) AND ( `create_time` <= 1455866896 ) 
+
+[ 2016-02-19T15:28:42+08:00 ] 180.136.206.226 /index.php?customer=37&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null)  ) AND ( `create_time` <= 1455866922 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null) AND (`sales_id`  null)  ) AND ( `create_time` <= 1455866922 ) 
+
+[ 2016-02-19T15:32:26+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867146 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867146 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867146 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867146 ) 
+
+[ 2016-02-19T15:33:04+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867183 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867183 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867183 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867183 ) 
+
+[ 2016-02-19T15:33:07+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867187 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867187 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867187 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867187 ) 
+
+[ 2016-02-19T15:33:25+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867205 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867205 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867205 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867205 ) 
+
+[ 2016-02-19T15:42:14+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867734 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867734 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867734 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867734 ) 
+
+[ 2016-02-19T15:42:28+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867748 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867748 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867748 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867748 ) 
+
+[ 2016-02-19T15:42:45+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867765 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867765 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455867765 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455867765 ) 
+
+[ 2016-02-19T15:53:02+08:00 ] 180.136.206.226 /index.php?customer=36&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455868381 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455868381 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455868381 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455868381 ) 
+
+[ 2016-02-19T16:05:24+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:05:32+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:05:43+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:06:00+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:06:00+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:08:24+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:08:26+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:08:44+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:09:21+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:09:24+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:12:21+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:12:23+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:12:23+08:00 ] ERR: (ThinkException) 非法操作:zensong
+[ 2016-02-19T16:13:04+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zengsong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455869584 ) LIMIT 0,10' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455869584 ) LIMIT 0,10  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null)  ) AND ( `create_time` <= 1455869584 )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( (`sales_id`  null)  ) AND ( `create_time` <= 1455869584 ) 
+
+[ 2016-02-19T16:49:47+08:00 ] 180.136.206.226 /index.php?customer=15&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zengsong
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array) ) AND ( `create_time` <= 1455871787 ) LIMIT 0,10  
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array) ) AND ( `create_time` <= 1455871787 ) 
+
+[ 2016-02-19T17:14:03+08:00 ] 180.136.206.226 /index.php?customer=37&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zengsong
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array) ) AND ( `create_time` <= 1455873242 ) LIMIT 0,10  
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array) ) AND ( `create_time` <= 1455873242 ) 
+
+[ 2016-02-19T17:14:08+08:00 ] 180.136.206.226 /index.php?customer=37&role=all&start_time=&end_time=&act=search&zsact=search&m=finance&a=zengsong
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array) ) AND ( `create_time` <= 1455873247 ) LIMIT 0,10  
+ERR: Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT  `name` FROM `crm_finance_present` WHERE ( `sales_id` IN (Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array,Array) ) AND ( `create_time` <= 1455873247 ) 
+

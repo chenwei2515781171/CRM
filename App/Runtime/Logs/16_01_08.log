@@ -1,0 +1,110 @@
+[ 2016-01-08T14:45:34+08:00 ] 180.136.238.243 /index.php?m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-01-08T14:46:16+08:00 ] 180.136.238.243 /index.php?m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-01-08T14:46:21+08:00 ] 180.136.238.243 /index.php?customer=all&role=all&start_time=&end_time=&act=search&zsact=zsexcel&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-01-08T14:46:23+08:00 ] 180.136.238.243 /index.php?customer=all&role=all&start_time=&end_time=&act=search&zsact=zsexcel&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-01-08T14:46:27+08:00 ] 180.136.238.243 /index.php?customer=all&role=all&start_time=&end_time=&act=search&zsact=zsexcel&m=finance&a=zensong
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `name` FROM `crm_user` WHERE ( role_id= ) LIMIT 1  
+
+[ 2016-01-08T15:51:34+08:00 ] 180.136.238.243 /index.php?m=contacts&a=index
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT role.user_id AS user_id,role.role_id AS role_id,role.position_id AS position_id,user.name AS user_name,user.status AS status,user.weixinid AS weixinid,user.category_id AS category_id,user.sex AS sex,user.address AS address,user.email AS email,user.telephone AS telephone,position.name AS role_name,position.parent_id AS parent_id,position.department_id AS department_id,position.description AS description,role_department.name AS department_name FROM crm_role role LEFT JOIN crm_user user ON user.user_id=role.user_id LEFT JOIN crm_position position ON position.position_id=role.position_id LEFT JOIN crm_role_department role_department ON role_department.department_id=position.department_id WHERE ( role.role_id in () ) 
+
+[ 2016-01-08T15:51:44+08:00 ] 180.136.238.243 /index.php?m=contacts&a=index
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT role.user_id AS user_id,role.role_id AS role_id,role.position_id AS position_id,user.name AS user_name,user.status AS status,user.weixinid AS weixinid,user.category_id AS category_id,user.sex AS sex,user.address AS address,user.email AS email,user.telephone AS telephone,position.name AS role_name,position.parent_id AS parent_id,position.department_id AS department_id,position.description AS description,role_department.name AS department_name FROM crm_role role LEFT JOIN crm_user user ON user.user_id=role.user_id LEFT JOIN crm_position position ON position.position_id=role.position_id LEFT JOIN crm_role_department role_department ON role_department.department_id=position.department_id WHERE ( role.role_id in () ) 
+
+[ 2016-01-08T15:51:49+08:00 ] 180.136.238.243 /index.php?m=contacts&a=index
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT role.user_id AS user_id,role.role_id AS role_id,role.position_id AS position_id,user.name AS user_name,user.status AS status,user.weixinid AS weixinid,user.category_id AS category_id,user.sex AS sex,user.address AS address,user.email AS email,user.telephone AS telephone,position.name AS role_name,position.parent_id AS parent_id,position.department_id AS department_id,position.description AS description,role_department.name AS department_name FROM crm_role role LEFT JOIN crm_user user ON user.user_id=role.user_id LEFT JOIN crm_position position ON position.position_id=role.position_id LEFT JOIN crm_role_department role_department ON role_department.department_id=position.department_id WHERE ( role.role_id in () ) 
+
+[ 2016-01-08T15:51:56+08:00 ] 180.136.238.243 /index.php?m=contacts&a=index
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT role.user_id AS user_id,role.role_id AS role_id,role.position_id AS position_id,user.name AS user_name,user.status AS status,user.weixinid AS weixinid,user.category_id AS category_id,user.sex AS sex,user.address AS address,user.email AS email,user.telephone AS telephone,position.name AS role_name,position.parent_id AS parent_id,position.department_id AS department_id,position.description AS description,role_department.name AS department_name FROM crm_role role LEFT JOIN crm_user user ON user.user_id=role.user_id LEFT JOIN crm_position position ON position.position_id=role.position_id LEFT JOIN crm_role_department role_department ON role_department.department_id=position.department_id WHERE ( role.role_id in () ) 
+
+[ 2016-01-08T16:20:23+08:00 ] 180.136.238.243 /index.php?m=contacts&a=index
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%d ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `crm_customer` WHERE ( customer_id = %d ) LIMIT 1  
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT role.user_id AS user_id,role.role_id AS role_id,role.position_id AS position_id,user.name AS user_name,user.status AS status,user.weixinid AS weixinid,user.category_id AS category_id,user.sex AS sex,user.address AS address,user.email AS email,user.telephone AS telephone,position.name AS role_name,position.parent_id AS parent_id,position.department_id AS department_id,position.description AS description,role_department.name AS department_name FROM crm_role role LEFT JOIN crm_user user ON user.user_id=role.user_id LEFT JOIN crm_position position ON position.position_id=role.position_id LEFT JOIN crm_role_department role_department ON role_department.department_id=position.department_id WHERE ( role.role_id in () ) 
+
+[ 2016-01-08T16:20:35+08:00 ] 180.136.238.243 /index.php?m=customer&a=analytics
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) AND ( `owner_role_id` = 25 ) AND ( `create_time` < 1452241235 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `crm_customer` WHERE ( `is_deleted` = 0 ) AND ( `customer_id` IN () ) AND ( `owner_role_id` = 25 ) AND ( `create_time` < 1452241235 ) LIMIT 1  
+

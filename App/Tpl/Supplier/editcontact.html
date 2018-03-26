@@ -1,0 +1,49 @@
+<form method="post" action="{:U('supplier/editcontact')}" id="edit_supplier_contact_form" class="form-horizontal">	
+	<input type="hidden" value="{$Think.get.id}" name="id">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th colspan="2">{:L('CONTACTS_INFO')}</th>
+			</tr>
+			<tr>
+				<td class="tdleft span2">{:L('USERNAME')}</td>
+				<td><input type="text" value="{$contact_info.name}" name="base[name]" class="span3"></td>
+			</tr>
+				<tr><td class="tdleft">{:L('POSITION')}</td>
+				<td><input type="text" value="{$contact_info.position}" name="base[position]" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('SEX')}</td>
+				<td>
+					<select class="span2" id="sex" name="base[sex]">
+						<option <if condition="$contact_info.sex eq 1">selected="selected"</if> value="1">{:L('MALE')}</option>
+						<option <if condition="$contact_info.sex eq 0">selected="selected"</if> value="0">{:L('WOMAN')}</option>
+					</select>
+				</td>
+			</tr><tr>
+				<td class="tdleft">{:L('EMALE')}</td>
+				<td><input type="text" value="{$contact_info.email}" name="base[email]" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('TEL')}</td>
+				<td><input type="text" value="{$contact_info.telphone}" name="base[telphone]" class="span3"></td>
+			</tr>
+				<tr><td class="tdleft">{:L('QQ')}</td>
+				<td><input type="text" value="{$contact_info.qq}" name="base[qq]" class="span3"></td>
+			</tr>
+			<tr>
+				<td class="tdleft">{:L('ADDRESS')}</td>
+				<td>
+					<select class="input-medium" name="base[province]" id="province"></select>
+					<select class="input-medium" name="base[city]" id="city"></select>
+					<input type="text" value="" placeholder="区/街道信息" name="base[street]" class="span3">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+<script type="text/javascript">
+	$(function(){
+		new PCAS("base[province]","base[city]",'{$contact_info.province}','{$contact_info.city}');
+	});
+</script>

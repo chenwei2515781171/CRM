@@ -1,0 +1,133 @@
+<include file="Public:header" />
+	<div class="container">
+		<div class="page-header" style="border:none; font-size:14px;">
+			<include file="Stock:header" />
+		</div>
+		<include file="Public:alert" />
+		<div class="row">
+		<div class="span2 knowledgecate">
+			<ul class="nav nav-list">
+				<li class="active">
+					<a href="javascript:void(0);">按类型查看</a>
+				</li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>销售单</a></li>
+				<li><a <if condition="$assign[mode] eq s && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=s&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>销售退货单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq in">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=in')}"><i class="icon-white icon-chevron-right"></i>采购单</a></li>
+				<li><a <if condition="$assign[mode] eq p && $assign[stage] eq out">class="active"</if> href="{:U('stock/inoutorder','mode=p&amp;stage=out')}"><i class="icon-white icon-chevron-right"></i>采购退货单</a></li>
+				<li><a href="{:U('stock/inout')}"><i class="icon-white icon-chevron-right"></i>出入库统计</a></li>
+				<li><a class="active" href="{:U('stock/out')}"><i class="icon-white icon-chevron-right"></i>出库统计</a></li>
+				<li><a class="active" href="{:U('stock/in')}"><i class="icon-white icon-chevron-right"></i>入库统计</a></li>
+			</ul>
+		</div>
+		<div class="span10">
+			<div class="pull-left">
+				<ul class="nav pull-left">
+					<li class="pull-left">
+						<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+							<ul class="nav pull-left">
+								<li class="pull-left" style="margin-top:3px;">
+								产品名称&nbsp; <select style="width:auto" name="product" id="product" onchange="changeRole()" autocomplete="off">
+									<option class="all" value="all">全部</option>
+									<volist name="productlist" id="vo">
+										<option value="{$vo.product_id}" <if condition="$vo['product_id'] eq intval($_GET['product'])">selected="selected"</if>>{$vo.name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+							
+							<li class="pull-left">
+								时间&nbsp; {:L('FROM')} <input id="start_time" name="start_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate span2" type="text" value="{$_GET['start_time']}"> {:L('TO')} <input id="end_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" name="end_time" class="Wdate span2" type="text" value="{$_GET['end_time']}">&nbsp;&nbsp;
+							</li>
+                               <li class="pull-left" style="margin-top:3px;">
+								仓库&nbsp; &nbsp; &nbsp; &nbsp; <select style="width:auto" name="warehouse" id="warehouse" onchange="changeCondition()">
+									<option class="all" value="all">{:L('ALL')}</option>
+									<volist name="warehouselist" id="vo">
+										<option value="{$vo.id}" >{$vo.name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+
+							    <input type="hidden" name="act" id="act" value="search"/>
+								<li class="pull-left" style="margin-top:3px;">
+								<input name="m" value="stock" type="hidden">
+								<input name="a" value="out" type="hidden">
+								<button type="submit" class="btn">  {:L('SEARCH')}</button>
+							</li>
+							</ul>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="span10">
+			<table class="table table-hover table-striped table_thead_fixed">
+				<thead>
+					<tr>
+							<th style="text-align:center;height:30px;line-height:30px;border:1px #F0F0F0 solid;" colspan="7">出库统计&nbsp;(表格)</th>
+							<th><a href="javascript:void(0);" id="outexcelExport" class="link"> <i class="icon-download"> </i> 导出表格</a></th>
+						</tr>
+					<tr id="childNodes_num">
+						<th>产品名</th>
+                        <th>单号</th>
+                        <th>数量</th>
+						<th>单价</th>
+						<th>金额</th>
+						<th>仓库</th>
+						<th>销售员</th>
+						<th>时间</th>
+					</tr>
+				</thead>
+				<tfoot>
+						<tr style="background: #029BE2;color: #fff;font-size: 13px;" colspan="8">
+							<td>出库金额总计：</td>
+							<td>{$all['total_price']}</td>
+						</tr>
+					</tfoot>
+					<tbody>
+                        <volist name="data" id="vo" >
+                        	<volist name="vo.data" id="sub" key="k">
+                        		<tr>
+                        		<if condition="$k eq 1">
+                        			<td class="user" rowspan="{$vo.count}">{$vo.product_name}</td>
+                        		</if>
+								<td>{$sub.sn_code}</td>
+								<td>{$sub.num}</td>
+								<td>{$sub.suggested_price}</td>
+								<td>{$sub.total}</td>
+								<td>{$sub.warehouse_name}</td>
+								<td>{$sub.create_user_name}</td>
+								<td>{$sub['create_time']|date="Y-m-d",###}</td>								
+								</tr>
+							</volist>
+							<tr>
+								<td></td>
+								<td colspan="3">出库金额总计：{$vo.total_all}元</td>
+								<td colspan="3">出库量总计：{$vo.num_all} </td>
+								<td colspan="3">库存量：{$vo.stock_num}</td>
+							    </tr>
+						</volist>		
+						<tr>
+							<td colspan="8">
+								{$page}
+							</td>
+						</tr>			
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script>
+$("#outexcelExport").click(function(){
+	if(confirm("你确定要导出出库数据吗？")){
+		var product=$("product").val();
+		var warehouse=$("warehouse").val();
+		
+		var start_time = $("#start_time").val();
+		var end_time = $("#end_time").val();
+		var url = "{:U('stock/out')}&product="+product+"&warehouse="+warehouse+"&start_time="+start_time+"&end_time="+end_time+"&act=outexcel";
+		window.location.href = url;
+		//$("#act").val('inexcel');	
+		//$("#searchForm").submit();
+	}
+})
+</script>
+<include file="Public:footer" />

@@ -1,0 +1,55 @@
+<div class="clearfix">
+	<ul class="nav pull-left">
+		<input type="hidden" id="fields" value="name">
+		<input type="hidden" id="conditions" value="contains">
+		<input id="searchs" type="text" class="input-small search-query" name="search">
+  		<button type="submit" class="btn" onclick="d_changeCondition(0)"><i class="icon-search"></i> {:L('SEARCH')}</button>
+	</ul>
+</div>
+<empty name="customerList">
+	<div class="alert">{:L('TEMPORARILY_NO_DATA')}</div>
+<else/>
+<table class="table" style="margin-top:10px;">
+	<tbody id="datas">
+		<volist name="customerList" id="vo">
+			<tr>
+				<td>
+					<input type="radio" name="customer" value="{$vo.customer_id}" rel="{$vo.contacts_id}" />
+					<input type="hidden" name="contacts_name" value="{$vo.contacts_name}" />
+					<input type="hidden" name="address" value="{$vo.address}" />
+				</td>
+				<td>{$vo.name}</td>
+			</tr>
+		</volist>
+	</tbody>
+</table>
+</empty>
+<script type="text/javascript">
+	function d_changeCondition(p){
+		$('#datas').addClass('hide');
+		var field = $('#fields').val();
+		var condition = $('#conditions').val();
+		var asearch = encodeURI($("#searchs").val());
+		$.ajax({
+			type:'get',
+			url:'index.php?m=customer&a=changecontent&field='+field+'&search='+asearch+'&condition='+condition+'&p='+p<if condition="$customer_id">+"&customer_id={$customer_id}"</if>,
+			async:false,
+			success:function(data){			
+				var temp = '';
+				if(data.data.list != null){
+					$.each(data.data.list, function(k, v){
+						temp += "<tr><td><input type='radio' name='customer' value='"+v.customer_id+"'/></td>";
+                        temp +=  "<td>" + v.name + "</td>";
+                        temp +=  "</tr>";
+					});			
+					$('#datas').html(temp);
+				}else{
+					$('#datas').html('<tr><td colspan="4">{:L('DO_NOT_FIND_THE_RESULTS_YOU_WANT')}</tr>');
+					$('#footers').addClass('hide');
+				}
+				$('#datas').removeClass('hide');
+			},
+			dataType:'json'
+		});		
+	}
+</script>

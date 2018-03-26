@@ -1,0 +1,166 @@
+<include file="Public:header" />
+<div class="container">
+	<div class="page-header" style="border:none; font-size:14px;">
+		<include file="Finance:header" />
+	</div>
+	<a href="{:U('finance/sales')}" >销售</a> &nbsp;  &nbsp; &nbsp;  &nbsp; 
+	<a href="{:U('finance/ziyong')}" >自用</a> &nbsp;  &nbsp; &nbsp;  &nbsp; 
+	<a href="{:U('finance/shoucang')}">收藏</a> &nbsp;  &nbsp; &nbsp;  &nbsp; 
+	<a href="{:U('finance/huigou')}">回购</a> &nbsp;  &nbsp; &nbsp;  &nbsp; 
+	<a href="{:U('finance/zengsong')}">赠送</a> &nbsp;  &nbsp; &nbsp;  &nbsp; 
+	<div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<ul class="nav pull-left">
+				<li class="pull-left">
+					<form class="form-inline" id="searchForm" onsubmit="return checkSearchForm();" action="" method="get">
+						<ul class="nav pull-left" style="margin-top:20px">
+								<li class="pull-left">
+								客户筛选&nbsp; <input type="text" id="sx" style="width:50px;"/><button type="button" class="sx-btn">确定</button>&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								客户&nbsp; <select style="width:auto" name="customer" id="customer" onchange="changeRole()" autocomplete="off">
+									<option class="all" value="all">{:L('ALL')}</option>
+									<volist name="customerList" id="vo">
+										<option value="{$vo.customer_id}" <if condition="$vo['customer_id'] eq intval($_GET['customer'])">selected="selected"</if>>{$vo.name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								销售员&nbsp; <select style="width:auto" name="role" id="role" onchange="changeCondition()" autocomplete="off">
+									<option class="all" value="all">{:L('ALL')}</option>
+									<volist name="salesuserlist" id="vo">
+										<option value="{$vo.role_id}" <if condition="$vo['role_id'] eq intval($_GET['role'])">selected="selected"</if>>{$vo.name}</option>
+									</volist>
+								</select>&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								时间&nbsp; {:L('FROM')} <input id="start_time" name="start_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate span2" type="text" value="{$_GET['start_time']}"> {:L('TO')} <input id="end_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" name="end_time" class="Wdate span2" type="text" value="{$_GET['end_time']}">&nbsp;&nbsp;
+							</li>
+							<li class="pull-left">
+								<input type="hidden" name="act" id="act" value="search"/>
+								<input type="hidden" name="hgact" id="hgact" value="search"/>
+								<input name="m" value="finance" type="hidden">
+								<input name="a" value="huigou" type="hidden">
+								<button type="submit" class="btn">  {:L('SEARCH')}</button>
+							</li>
+						</ul>
+					</form>
+				</li>				
+			</ul>
+		</div>
+		<style>
+		#report_content th{text-align:center;}
+		#report_content td{text-align:center;vertical-align:middle}
+		</style>
+		<div  id="an_chart" style="margin-left:10px;">			
+			<div id="report_content">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th style="text-align:center;height:30px;line-height:30px;border:1px #F0F0F0 solid;" colspan="8">回购统计</th>
+							<th><a href="javascript:void(0);" id="huigouexcel" class="link"> <i class="icon-download"> </i> 导出表格</a></th>
+						</tr>
+						<tr>
+							<th>客户</th>
+							<th>销售单号</th>
+							<th>销售额</th>
+							<th>已收款</th>
+							<th>支付方式</th>
+							<th>未收款</th>
+							<th>销售员</th>
+							<th>时间</th>
+							<th>产品详情</th>
+							
+						</tr>
+					</thead>
+					<tfoot>
+						<tr style="background: #029BE2;color: #fff;font-size: 13px;" colspan="11">
+							<td>销售总计：</td>
+							<td>{$all['total_price']}</td>
+							<td>&nbsp;</td>
+							<td>已收款总计：</td>
+							<td>{$al['total_ispay_price']}</td>
+							<td>&nbsp;</td>
+							<td>未收款总计：</td>
+							<td>{$a['total_nopay_price']}</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tfoot>
+					<tbody>
+                        <volist name="data" id="vo" >
+                        	<volist name="vo.data" id="sub" key="k">
+                        		<tr>
+                        		<if condition="$k eq 1">
+                        			<td class="user" rowspan="{$vo.count}">{$vo.customer_name}</td>
+                        		</if>
+								<td><a href="{:U('sales/view','id='.$sub['id'])}">{$sub.sn_code}</a></td>
+								<td>{$sub.sales_price}</td>
+								<td>{$sub.ispay_price}</td>
+							    <td>{$sub.pay_type}</td>
+								<td>{$sub.nopay_price}</td>
+								<td>{$sub.sale_user_name}</td>
+								<td>{$sub['create_time']|date="Y-m-d",###}</td>	
+								<td><a class="view_product" rel="{$sub.id}" href="javascript:void(0);">查看</a></td>
+								</tr>
+								
+							</volist>
+							
+						</volist>
+						<tr>
+							<td colspan="9">
+								{$page}
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hide" id="dialog-role-info" title="{:L('DIALOG_USER_INFO')}">loading...</div>
+<div class="hide" id="dialog-view-product" title="查看销售商品列表">loading...</div>
+<script type="text/javascript">
+$(".sx-btn").click(function(){
+	var keyword = $("#sx").val();
+	$.post("{:U('Customer/sx')}",{"keyword":keyword},function(data){
+		if(data){
+			$("#customer").html(data);
+		}
+   },"text");
+})
+/*$("#huigouexcel").click(function(){
+	if(confirm("你确定要导出回购数据吗？")){
+		$("#hgact").val('hgexcel');	
+		$("#searchForm").submit();
+	}
+})*/
+$("#huigouexcel").click(function(){
+	if(confirm("你确定要导出回购数据吗？")){
+		var customer = $("#customer").val();
+		var role = $("#role").val();
+		var start_time = $("#start_time").val();
+		var end_time = $("#end_time").val();
+		var url = "{:U('finance/huigou')}&customer="+customer+"&role="+role+"&start_time="+start_time+"&end_time="+end_time+"&act=hgexcel";
+		window.location.href = url;
+		//$("#act").val('salesexcel');
+		//$("#searchForm").submit();
+	}
+})
+width=800;
+$("#dialog-view-product").dialog({
+		autoOpen: false,
+		modal: true,
+		width: width,
+		maxHeight: 400,
+		position: ["center",100]
+	});
+
+	$('.view_product').click(function(){
+		var sales_id = $(this).attr('rel');
+		$('#dialog-view-product').dialog('open');
+		$('#dialog-view-product').load('/index.php?m=sales&a=product_list&id='+sales_id);
+	});
+</script>
+<include file="Public:footer" />
